@@ -154,6 +154,7 @@
 		06FB68241CA46E560010D7E2 /* EORelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EORelationship.m; sourceTree = "<group>"; };
 		06FB68271CA607670010D7E2 /* EOModel+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOModel+FileAccess.m"; sourceTree = "<group>"; };
 		06FB682A1CA6085B0010D7E2 /* EOEntity+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOEntity+FileAccess.m"; sourceTree = "<group>"; };
+		D89A54471CA7E2A0009E276E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +241,7 @@
 		06A29B6E173C705800045AE6 = {
 			isa = PBXGroup;
 			children = (
+				D89A54471CA7E2A0009E276E /* README.md */,
 				06A29B9C173C745D00045AE6 /* Shared */,
 				06A29B80173C705800045AE6 /* EOModeller */,
 				06A29B79173C705800045AE6 /* Frameworks */,
@@ -363,7 +365,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OCS;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = OC;
 			};
 			buildConfigurationList = 06A29B72173C705800045AE6 /* Build configuration list for PBXProject "EOModeller" */;
@@ -513,6 +515,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -567,6 +570,7 @@
 				GCC_PREFIX_HEADER = "EOModeller/EOModeller-Prefix.pch";
 				INFOPLIST_FILE = "EOModeller/EOModeller-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.ocs.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -580,6 +584,7 @@
 				GCC_PREFIX_HEADER = "EOModeller/EOModeller-Prefix.pch";
 				INFOPLIST_FILE = "EOModeller/EOModeller-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.ocs.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
