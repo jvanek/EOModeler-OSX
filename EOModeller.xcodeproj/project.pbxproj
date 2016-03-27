@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		064A1FC31748C9C800DD9766 /* PicProperty.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 064A1FC21748C9C800DD9766 /* PicProperty.tiff */; };
+		064A1FC81748CD0D00DD9766 /* PicKey.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 064A1FC41748CD0D00DD9766 /* PicKey.tiff */; };
+		064A1FC91748CD0D00DD9766 /* PicLock.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 064A1FC51748CD0D00DD9766 /* PicLock.tiff */; };
+		064A1FCA1748CD0D00DD9766 /* PicToMany.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 064A1FC61748CD0D00DD9766 /* PicToMany.tiff */; };
+		064A1FCB1748CD0D00DD9766 /* PicToOne.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 064A1FC71748CD0D00DD9766 /* PicToOne.tiff */; };
+		064A1FCE1748CDAD00DD9766 /* OCSNamedValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 064A1FCD1748CDAD00DD9766 /* OCSNamedValueTransformer.m */; };
+		064A1FD01748D98300DD9766 /* Check.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 064A1FCF1748D98300DD9766 /* Check.tiff */; };
+		066DA46C174EE61200F2248B /* OCSModel+SQLGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DA46B174EE61200F2248B /* OCSModel+SQLGeneration.m */; };
+		066DA472174EE7C500F2248B /* OCSModel+FileAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DA471174EE7C400F2248B /* OCSModel+FileAccess.m */; };
+		066DA475174EE88600F2248B /* OCSModel+SplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DA474174EE88500F2248B /* OCSModel+SplitViewDelegate.m */; };
+		066DA478174EE98C00F2248B /* OCSModel+TableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DA477174EE98B00F2248B /* OCSModel+TableViewDelegate.m */; };
+		066DA47A174F810700F2248B /* EOfile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 066DA479174F810600F2248B /* EOfile.icns */; };
+		066DA480174F95CF00F2248B /* OCSModelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DA47E174F95CF00F2248B /* OCSModelGroup.m */; };
+		066DA481174F95CF00F2248B /* OCSModelGroup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 066DA47F174F95CF00F2248B /* OCSModelGroup.xib */; };
+		066DA483174FA3A500F2248B /* GenerateSQL.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 066DA482174FA3A500F2248B /* GenerateSQL.tiff */; };
+		066DA486174FA6AC00F2248B /* OCSEntitiesAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DA485174FA6AB00F2248B /* OCSEntitiesAC.m */; };
+		066DA489174FB11F00F2248B /* OCSAttributesAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DA488174FB11C00F2248B /* OCSAttributesAC.m */; };
+		066DA48C174FB13800F2248B /* OCSRelationshipsAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DA48B174FB13500F2248B /* OCSRelationshipsAC.m */; };
+		066DA48E174FB85F00F2248B /* SmartSort.png in Resources */ = {isa = PBXBuildFile; fileRef = 066DA48D174FB85F00F2248B /* SmartSort.png */; };
+		066DA490174FBB3800F2248B /* SmartSortOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 066DA48F174FBB3800F2248B /* SmartSortOff.png */; };
+		06749E5117525A81001BCE2B /* AttributeInspector.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06749E4D17525A80001BCE2B /* AttributeInspector.tiff */; };
+		06749E5217525A81001BCE2B /* EntityInspector.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06749E4E17525A80001BCE2B /* EntityInspector.tiff */; };
+		06749E5317525A81001BCE2B /* ModelInspector.png in Resources */ = {isa = PBXBuildFile; fileRef = 06749E4F17525A80001BCE2B /* ModelInspector.png */; };
+		06749E5417525A81001BCE2B /* RelationshipInspector.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06749E5017525A81001BCE2B /* RelationshipInspector.tiff */; };
+		06749E62175278FF001BCE2B /* UserDictionaryInspector.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06749E61175278FF001BCE2B /* UserDictionaryInspector.tiff */; };
+		06872D8D17500254005F5233 /* WO_BundleReference.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06872D8C17500254005F5233 /* WO_BundleReference.pdf */; };
+		06872D9A17501852005F5233 /* eomt_copy.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D8E17501852005F5233 /* eomt_copy.tiff */; };
+		06872D9B17501852005F5233 /* eomt_cut.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D8F17501852005F5233 /* eomt_cut.tiff */; };
+		06872D9C17501852005F5233 /* eomt_delete.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9017501852005F5233 /* eomt_delete.tiff */; };
+		06872D9D17501852005F5233 /* eomt_flattenproperty.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9117501852005F5233 /* eomt_flattenproperty.tiff */; };
+		06872D9E17501852005F5233 /* eomt_inspect.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9217501852005F5233 /* eomt_inspect.tiff */; };
+		06872D9F17501852005F5233 /* eomt_newattribute.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9317501852005F5233 /* eomt_newattribute.tiff */; };
+		06872DA017501852005F5233 /* eomt_neweditor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9417501852005F5233 /* eomt_neweditor.tiff */; };
+		06872DA117501852005F5233 /* eomt_newentity.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9517501852005F5233 /* eomt_newentity.tiff */; };
+		06872DA217501852005F5233 /* eomt_newfetchspec.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9617501852005F5233 /* eomt_newfetchspec.tiff */; };
+		06872DA317501852005F5233 /* eomt_newrelationship.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9717501852005F5233 /* eomt_newrelationship.tiff */; };
+		06872DA417501852005F5233 /* eomt_paste.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9817501852005F5233 /* eomt_paste.tiff */; };
+		06872DA517501852005F5233 /* eomt_undo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06872D9917501852005F5233 /* eomt_undo.tiff */; };
+		06872DA8175026F6005F5233 /* OCS_AC.m in Sources */ = {isa = PBXBuildFile; fileRef = 06872DA7175026F6005F5233 /* OCS_AC.m */; };
+		06872DAF1750EBAE005F5233 /* OCSInspectorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 06872DAE1750EBAE005F5233 /* OCSInspectorVC.m */; };
+		06A29B7B173C705800045AE6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A29B7A173C705800045AE6 /* Cocoa.framework */; };
+		06A29B85173C705800045AE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A29B83173C705800045AE6 /* InfoPlist.strings */; };
+		06A29B87173C705800045AE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A29B86173C705800045AE6 /* main.m */; };
+		06A29B8B173C705800045AE6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 06A29B89173C705800045AE6 /* Credits.rtf */; };
+		06A29B8E173C705800045AE6 /* OCSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A29B8D173C705800045AE6 /* OCSModel.m */; };
+		06A29B91173C705800045AE6 /* OCSModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A29B8F173C705800045AE6 /* OCSModel.xib */; };
+		06A29B94173C705800045AE6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A29B92173C705800045AE6 /* MainMenu.xib */; };
+		06A29B9B173C712F00045AE6 /* EOapp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 06A29B9A173C712F00045AE6 /* EOapp.icns */; };
+		06A29BC81744EA2700045AE6 /* OCSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A29BC71744EA2700045AE6 /* OCSAppDelegate.m */; };
+		06FB680C1CA35BD60010D7E2 /* EOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB680B1CA35BD60010D7E2 /* EOModel.m */; };
+		06FB680F1CA35E680010D7E2 /* EOObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB680E1CA35E680010D7E2 /* EOObject.m */; };
+		06FB68111CA376C00010D7E2 /* NSError+OCSErrorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68101CA376C00010D7E2 /* NSError+OCSErrorExtensions.m */; };
+		06FB68181CA377E40010D7E2 /* NSMutableDictionary+OCSMutableDictionaryExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68131CA377E40010D7E2 /* NSMutableDictionary+OCSMutableDictionaryExtensions.m */; };
+		06FB68191CA377E40010D7E2 /* NSObject+OCSObjectExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68141CA377E40010D7E2 /* NSObject+OCSObjectExtensions.m */; };
+		06FB681A1CA377E40010D7E2 /* NSString+OCSStringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68151CA377E40010D7E2 /* NSString+OCSStringExtensions.m */; };
+		06FB681B1CA377E40010D7E2 /* NSTimer+OCSTimerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68161CA377E40010D7E2 /* NSTimer+OCSTimerExtensions.m */; };
+		06FB681C1CA377E40010D7E2 /* NSURL+OCSURLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68171CA377E40010D7E2 /* NSURL+OCSURLExtensions.m */; };
+		06FB681F1CA37DED0010D7E2 /* EOEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB681E1CA37DED0010D7E2 /* EOEntity.m */; };
+		06FB68221CA384E90010D7E2 /* EOAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68211CA384E90010D7E2 /* EOAttribute.m */; };
+		06FB68251CA46E560010D7E2 /* EORelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68241CA46E560010D7E2 /* EORelationship.m */; };
+		06FB68281CA607670010D7E2 /* EOModel+FileAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB68271CA607670010D7E2 /* EOModel+FileAccess.m */; };
+		06FB682B1CA6085B0010D7E2 /* EOEntity+FileAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FB682A1CA6085B0010D7E2 /* EOEntity+FileAccess.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		064A1FC21748C9C800DD9766 /* PicProperty.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PicProperty.tiff; sourceTree = "<group>"; };
+		064A1FC41748CD0D00DD9766 /* PicKey.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PicKey.tiff; sourceTree = "<group>"; };
+		064A1FC51748CD0D00DD9766 /* PicLock.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PicLock.tiff; sourceTree = "<group>"; };
+		064A1FC61748CD0D00DD9766 /* PicToMany.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PicToMany.tiff; sourceTree = "<group>"; };
+		064A1FC71748CD0D00DD9766 /* PicToOne.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PicToOne.tiff; sourceTree = "<group>"; };
+		064A1FCD1748CDAD00DD9766 /* OCSNamedValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSNamedValueTransformer.m; sourceTree = "<group>"; };
+		064A1FCF1748D98300DD9766 /* Check.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Check.tiff; sourceTree = "<group>"; };
+		066DA46B174EE61200F2248B /* OCSModel+SQLGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCSModel+SQLGeneration.m"; sourceTree = "<group>"; };
+		066DA471174EE7C400F2248B /* OCSModel+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCSModel+FileAccess.m"; sourceTree = "<group>"; };
+		066DA474174EE88500F2248B /* OCSModel+SplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCSModel+SplitViewDelegate.m"; sourceTree = "<group>"; };
+		066DA477174EE98B00F2248B /* OCSModel+TableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OCSModel+TableViewDelegate.m"; path = "EOModeller/OCSModel+TableViewDelegate.m"; sourceTree = SOURCE_ROOT; };
+		066DA479174F810600F2248B /* EOfile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EOfile.icns; sourceTree = "<group>"; };
+		066DA47D174F95CF00F2248B /* OCSModelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSModelGroup.h; sourceTree = "<group>"; };
+		066DA47E174F95CF00F2248B /* OCSModelGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSModelGroup.m; sourceTree = "<group>"; };
+		066DA47F174F95CF00F2248B /* OCSModelGroup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCSModelGroup.xib; sourceTree = "<group>"; };
+		066DA482174FA3A500F2248B /* GenerateSQL.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = GenerateSQL.tiff; sourceTree = "<group>"; };
+		066DA484174FA6AA00F2248B /* OCSEntitiesAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSEntitiesAC.h; sourceTree = "<group>"; };
+		066DA485174FA6AB00F2248B /* OCSEntitiesAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSEntitiesAC.m; sourceTree = "<group>"; };
+		066DA487174FB11A00F2248B /* OCSAttributesAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSAttributesAC.h; sourceTree = "<group>"; };
+		066DA488174FB11C00F2248B /* OCSAttributesAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSAttributesAC.m; sourceTree = "<group>"; };
+		066DA48A174FB13300F2248B /* OCSRelationshipsAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSRelationshipsAC.h; sourceTree = "<group>"; };
+		066DA48B174FB13500F2248B /* OCSRelationshipsAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSRelationshipsAC.m; sourceTree = "<group>"; };
+		066DA48D174FB85F00F2248B /* SmartSort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmartSort.png; sourceTree = "<group>"; };
+		066DA48F174FBB3800F2248B /* SmartSortOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmartSortOff.png; sourceTree = "<group>"; };
+		06749E4D17525A80001BCE2B /* AttributeInspector.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AttributeInspector.tiff; sourceTree = "<group>"; };
+		06749E4E17525A80001BCE2B /* EntityInspector.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = EntityInspector.tiff; sourceTree = "<group>"; };
+		06749E4F17525A80001BCE2B /* ModelInspector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ModelInspector.png; sourceTree = "<group>"; };
+		06749E5017525A81001BCE2B /* RelationshipInspector.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = RelationshipInspector.tiff; sourceTree = "<group>"; };
+		06749E61175278FF001BCE2B /* UserDictionaryInspector.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = UserDictionaryInspector.tiff; sourceTree = "<group>"; };
+		06872D8C17500254005F5233 /* WO_BundleReference.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = WO_BundleReference.pdf; sourceTree = "<group>"; };
+		06872D8E17501852005F5233 /* eomt_copy.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_copy.tiff; sourceTree = "<group>"; };
+		06872D8F17501852005F5233 /* eomt_cut.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_cut.tiff; sourceTree = "<group>"; };
+		06872D9017501852005F5233 /* eomt_delete.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_delete.tiff; sourceTree = "<group>"; };
+		06872D9117501852005F5233 /* eomt_flattenproperty.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_flattenproperty.tiff; sourceTree = "<group>"; };
+		06872D9217501852005F5233 /* eomt_inspect.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_inspect.tiff; sourceTree = "<group>"; };
+		06872D9317501852005F5233 /* eomt_newattribute.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_newattribute.tiff; sourceTree = "<group>"; };
+		06872D9417501852005F5233 /* eomt_neweditor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_neweditor.tiff; sourceTree = "<group>"; };
+		06872D9517501852005F5233 /* eomt_newentity.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_newentity.tiff; sourceTree = "<group>"; };
+		06872D9617501852005F5233 /* eomt_newfetchspec.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_newfetchspec.tiff; sourceTree = "<group>"; };
+		06872D9717501852005F5233 /* eomt_newrelationship.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_newrelationship.tiff; sourceTree = "<group>"; };
+		06872D9817501852005F5233 /* eomt_paste.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_paste.tiff; sourceTree = "<group>"; };
+		06872D9917501852005F5233 /* eomt_undo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = eomt_undo.tiff; sourceTree = "<group>"; };
+		06872DA6175026F6005F5233 /* OCS_AC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCS_AC.h; sourceTree = "<group>"; };
+		06872DA7175026F6005F5233 /* OCS_AC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCS_AC.m; sourceTree = "<group>"; };
+		06872DAD1750EBAE005F5233 /* OCSInspectorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSInspectorVC.h; sourceTree = "<group>"; };
+		06872DAE1750EBAE005F5233 /* OCSInspectorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSInspectorVC.m; sourceTree = "<group>"; };
+		06A29B77173C705800045AE6 /* EOModeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOModeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06A29B7A173C705800045AE6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		06A29B7D173C705800045AE6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		06A29B7E173C705800045AE6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		06A29B7F173C705800045AE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		06A29B82173C705800045AE6 /* EOModeller-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EOModeller-Info.plist"; sourceTree = "<group>"; };
+		06A29B84173C705800045AE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		06A29B86173C705800045AE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06A29B88173C705800045AE6 /* EOModeller-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EOModeller-Prefix.pch"; sourceTree = "<group>"; };
+		06A29B8A173C705800045AE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		06A29B8C173C705800045AE6 /* OCSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSModel.h; sourceTree = "<group>"; };
+		06A29B8D173C705800045AE6 /* OCSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCSModel.m; sourceTree = "<group>"; };
+		06A29B90173C705800045AE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OCSModel.xib; sourceTree = "<group>"; };
+		06A29B93173C705800045AE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		06A29B9A173C712F00045AE6 /* EOapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EOapp.icns; sourceTree = "<group>"; };
+		06A29BC61744EA2700045AE6 /* OCSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSAppDelegate.h; sourceTree = "<group>"; };
+		06A29BC71744EA2700045AE6 /* OCSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSAppDelegate.m; sourceTree = "<group>"; };
+		06FB680A1CA35BD60010D7E2 /* EOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOModel.h; sourceTree = "<group>"; };
+		06FB680B1CA35BD60010D7E2 /* EOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOModel.m; sourceTree = "<group>"; };
+		06FB680D1CA35E680010D7E2 /* EOObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOObject.h; sourceTree = "<group>"; };
+		06FB680E1CA35E680010D7E2 /* EOObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOObject.m; sourceTree = "<group>"; };
+		06FB68101CA376C00010D7E2 /* NSError+OCSErrorExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+OCSErrorExtensions.m"; sourceTree = "<group>"; };
+		06FB68121CA376E60010D7E2 /* OCSShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSShared.h; sourceTree = "<group>"; };
+		06FB68131CA377E40010D7E2 /* NSMutableDictionary+OCSMutableDictionaryExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+OCSMutableDictionaryExtensions.m"; sourceTree = "<group>"; };
+		06FB68141CA377E40010D7E2 /* NSObject+OCSObjectExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OCSObjectExtensions.m"; sourceTree = "<group>"; };
+		06FB68151CA377E40010D7E2 /* NSString+OCSStringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OCSStringExtensions.m"; sourceTree = "<group>"; };
+		06FB68161CA377E40010D7E2 /* NSTimer+OCSTimerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+OCSTimerExtensions.m"; sourceTree = "<group>"; };
+		06FB68171CA377E40010D7E2 /* NSURL+OCSURLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+OCSURLExtensions.m"; sourceTree = "<group>"; };
+		06FB681D1CA37DED0010D7E2 /* EOEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOEntity.h; sourceTree = "<group>"; };
+		06FB681E1CA37DED0010D7E2 /* EOEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOEntity.m; sourceTree = "<group>"; };
+		06FB68201CA384E90010D7E2 /* EOAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOAttribute.h; sourceTree = "<group>"; };
+		06FB68211CA384E90010D7E2 /* EOAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOAttribute.m; sourceTree = "<group>"; };
+		06FB68231CA46E560010D7E2 /* EORelationship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EORelationship.h; sourceTree = "<group>"; };
+		06FB68241CA46E560010D7E2 /* EORelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EORelationship.m; sourceTree = "<group>"; };
+		06FB68271CA607670010D7E2 /* EOModel+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOModel+FileAccess.m"; sourceTree = "<group>"; };
+		06FB682A1CA6085B0010D7E2 /* EOEntity+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOEntity+FileAccess.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06A29B74173C705800045AE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A29B7B173C705800045AE6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		064A1FC11748C8E700DD9766 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				06749E61175278FF001BCE2B /* UserDictionaryInspector.tiff */,
+				06749E4D17525A80001BCE2B /* AttributeInspector.tiff */,
+				06749E4E17525A80001BCE2B /* EntityInspector.tiff */,
+				06749E4F17525A80001BCE2B /* ModelInspector.png */,
+				06749E5017525A81001BCE2B /* RelationshipInspector.tiff */,
+				06872D8E17501852005F5233 /* eomt_copy.tiff */,
+				06872D8F17501852005F5233 /* eomt_cut.tiff */,
+				06872D9017501852005F5233 /* eomt_delete.tiff */,
+				06872D9117501852005F5233 /* eomt_flattenproperty.tiff */,
+				06872D9217501852005F5233 /* eomt_inspect.tiff */,
+				06872D9317501852005F5233 /* eomt_newattribute.tiff */,
+				06872D9417501852005F5233 /* eomt_neweditor.tiff */,
+				06872D9517501852005F5233 /* eomt_newentity.tiff */,
+				06872D9617501852005F5233 /* eomt_newfetchspec.tiff */,
+				06872D9717501852005F5233 /* eomt_newrelationship.tiff */,
+				06872D9817501852005F5233 /* eomt_paste.tiff */,
+				06872D9917501852005F5233 /* eomt_undo.tiff */,
+				066DA48F174FBB3800F2248B /* SmartSortOff.png */,
+				066DA48D174FB85F00F2248B /* SmartSort.png */,
+				066DA482174FA3A500F2248B /* GenerateSQL.tiff */,
+				064A1FCF1748D98300DD9766 /* Check.tiff */,
+				064A1FC41748CD0D00DD9766 /* PicKey.tiff */,
+				064A1FC51748CD0D00DD9766 /* PicLock.tiff */,
+				064A1FC61748CD0D00DD9766 /* PicToMany.tiff */,
+				064A1FC71748CD0D00DD9766 /* PicToOne.tiff */,
+				064A1FC21748C9C800DD9766 /* PicProperty.tiff */,
+				06A29B9A173C712F00045AE6 /* EOapp.icns */,
+				066DA479174F810600F2248B /* EOfile.icns */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+		066DA47B174F954300F2248B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06872DA6175026F6005F5233 /* OCS_AC.h */,
+				06872DA7175026F6005F5233 /* OCS_AC.m */,
+				066DA484174FA6AA00F2248B /* OCSEntitiesAC.h */,
+				066DA485174FA6AB00F2248B /* OCSEntitiesAC.m */,
+				066DA487174FB11A00F2248B /* OCSAttributesAC.h */,
+				066DA488174FB11C00F2248B /* OCSAttributesAC.m */,
+				066DA48A174FB13300F2248B /* OCSRelationshipsAC.h */,
+				066DA48B174FB13500F2248B /* OCSRelationshipsAC.m */,
+				06A29B8C173C705800045AE6 /* OCSModel.h */,
+				06A29B8D173C705800045AE6 /* OCSModel.m */,
+				066DA471174EE7C400F2248B /* OCSModel+FileAccess.m */,
+				066DA477174EE98B00F2248B /* OCSModel+TableViewDelegate.m */,
+				066DA474174EE88500F2248B /* OCSModel+SplitViewDelegate.m */,
+				066DA46B174EE61200F2248B /* OCSModel+SQLGeneration.m */,
+				06872DAD1750EBAE005F5233 /* OCSInspectorVC.h */,
+				06872DAE1750EBAE005F5233 /* OCSInspectorVC.m */,
+				06A29B8F173C705800045AE6 /* OCSModel.xib */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		066DA47C174F956400F2248B /* Model Group -- unused at the moment */ = {
+			isa = PBXGroup;
+			children = (
+				066DA47D174F95CF00F2248B /* OCSModelGroup.h */,
+				066DA47E174F95CF00F2248B /* OCSModelGroup.m */,
+				066DA47F174F95CF00F2248B /* OCSModelGroup.xib */,
+			);
+			name = "Model Group -- unused at the moment";
+			sourceTree = "<group>";
+		};
+		06A29B6E173C705800045AE6 = {
+			isa = PBXGroup;
+			children = (
+				06A29B9C173C745D00045AE6 /* Shared */,
+				06A29B80173C705800045AE6 /* EOModeller */,
+				06A29B79173C705800045AE6 /* Frameworks */,
+				06A29B78173C705800045AE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06A29B78173C705800045AE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06A29B77173C705800045AE6 /* EOModeller.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06A29B79173C705800045AE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06A29B7A173C705800045AE6 /* Cocoa.framework */,
+				06A29B7C173C705800045AE6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06A29B7C173C705800045AE6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06A29B7D173C705800045AE6 /* AppKit.framework */,
+				06A29B7E173C705800045AE6 /* CoreData.framework */,
+				06A29B7F173C705800045AE6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		06A29B80173C705800045AE6 /* EOModeller */ = {
+			isa = PBXGroup;
+			children = (
+				066DA47C174F956400F2248B /* Model Group -- unused at the moment */,
+				06FB68091CA35B770010D7E2 /* Model Data Representation */,
+				066DA47B174F954300F2248B /* Model */,
+				06A29BC61744EA2700045AE6 /* OCSAppDelegate.h */,
+				06A29BC71744EA2700045AE6 /* OCSAppDelegate.m */,
+				06A29B92173C705800045AE6 /* MainMenu.xib */,
+				064A1FC11748C8E700DD9766 /* Pictures */,
+				06A29B81173C705800045AE6 /* Supporting Files */,
+			);
+			path = EOModeller;
+			sourceTree = "<group>";
+		};
+		06A29B81173C705800045AE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06872D8C17500254005F5233 /* WO_BundleReference.pdf */,
+				06A29B82173C705800045AE6 /* EOModeller-Info.plist */,
+				06A29B83173C705800045AE6 /* InfoPlist.strings */,
+				06A29B86173C705800045AE6 /* main.m */,
+				06A29B88173C705800045AE6 /* EOModeller-Prefix.pch */,
+				06A29B89173C705800045AE6 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06A29B9C173C745D00045AE6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				06FB68121CA376E60010D7E2 /* OCSShared.h */,
+				06FB68101CA376C00010D7E2 /* NSError+OCSErrorExtensions.m */,
+				06FB68131CA377E40010D7E2 /* NSMutableDictionary+OCSMutableDictionaryExtensions.m */,
+				06FB68141CA377E40010D7E2 /* NSObject+OCSObjectExtensions.m */,
+				06FB68151CA377E40010D7E2 /* NSString+OCSStringExtensions.m */,
+				06FB68161CA377E40010D7E2 /* NSTimer+OCSTimerExtensions.m */,
+				06FB68171CA377E40010D7E2 /* NSURL+OCSURLExtensions.m */,
+				064A1FCD1748CDAD00DD9766 /* OCSNamedValueTransformer.m */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		06FB68091CA35B770010D7E2 /* Model Data Representation */ = {
+			isa = PBXGroup;
+			children = (
+				06FB680D1CA35E680010D7E2 /* EOObject.h */,
+				06FB680E1CA35E680010D7E2 /* EOObject.m */,
+				06FB680A1CA35BD60010D7E2 /* EOModel.h */,
+				06FB680B1CA35BD60010D7E2 /* EOModel.m */,
+				06FB68271CA607670010D7E2 /* EOModel+FileAccess.m */,
+				06FB681D1CA37DED0010D7E2 /* EOEntity.h */,
+				06FB681E1CA37DED0010D7E2 /* EOEntity.m */,
+				06FB682A1CA6085B0010D7E2 /* EOEntity+FileAccess.m */,
+				06FB68201CA384E90010D7E2 /* EOAttribute.h */,
+				06FB68211CA384E90010D7E2 /* EOAttribute.m */,
+				06FB68231CA46E560010D7E2 /* EORelationship.h */,
+				06FB68241CA46E560010D7E2 /* EORelationship.m */,
+			);
+			name = "Model Data Representation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06A29B76173C705800045AE6 /* EOModeller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06A29B97173C705800045AE6 /* Build configuration list for PBXNativeTarget "EOModeller" */;
+			buildPhases = (
+				06A29B73173C705800045AE6 /* Sources */,
+				06A29B74173C705800045AE6 /* Frameworks */,
+				06A29B75173C705800045AE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EOModeller;
+			productName = EOModeller;
+			productReference = 06A29B77173C705800045AE6 /* EOModeller.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06A29B6F173C705800045AE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OCS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = OC;
+			};
+			buildConfigurationList = 06A29B72173C705800045AE6 /* Build configuration list for PBXProject "EOModeller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 06A29B6E173C705800045AE6;
+			productRefGroup = 06A29B78173C705800045AE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06A29B76173C705800045AE6 /* EOModeller */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06A29B75173C705800045AE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A29B85173C705800045AE6 /* InfoPlist.strings in Resources */,
+				06A29B8B173C705800045AE6 /* Credits.rtf in Resources */,
+				06A29B91173C705800045AE6 /* OCSModel.xib in Resources */,
+				06A29B94173C705800045AE6 /* MainMenu.xib in Resources */,
+				06A29B9B173C712F00045AE6 /* EOapp.icns in Resources */,
+				064A1FC31748C9C800DD9766 /* PicProperty.tiff in Resources */,
+				064A1FC81748CD0D00DD9766 /* PicKey.tiff in Resources */,
+				064A1FC91748CD0D00DD9766 /* PicLock.tiff in Resources */,
+				064A1FCA1748CD0D00DD9766 /* PicToMany.tiff in Resources */,
+				064A1FCB1748CD0D00DD9766 /* PicToOne.tiff in Resources */,
+				064A1FD01748D98300DD9766 /* Check.tiff in Resources */,
+				066DA47A174F810700F2248B /* EOfile.icns in Resources */,
+				066DA481174F95CF00F2248B /* OCSModelGroup.xib in Resources */,
+				066DA483174FA3A500F2248B /* GenerateSQL.tiff in Resources */,
+				066DA48E174FB85F00F2248B /* SmartSort.png in Resources */,
+				066DA490174FBB3800F2248B /* SmartSortOff.png in Resources */,
+				06872D8D17500254005F5233 /* WO_BundleReference.pdf in Resources */,
+				06872D9A17501852005F5233 /* eomt_copy.tiff in Resources */,
+				06872D9B17501852005F5233 /* eomt_cut.tiff in Resources */,
+				06872D9C17501852005F5233 /* eomt_delete.tiff in Resources */,
+				06872D9D17501852005F5233 /* eomt_flattenproperty.tiff in Resources */,
+				06872D9E17501852005F5233 /* eomt_inspect.tiff in Resources */,
+				06872D9F17501852005F5233 /* eomt_newattribute.tiff in Resources */,
+				06872DA017501852005F5233 /* eomt_neweditor.tiff in Resources */,
+				06872DA117501852005F5233 /* eomt_newentity.tiff in Resources */,
+				06872DA217501852005F5233 /* eomt_newfetchspec.tiff in Resources */,
+				06872DA317501852005F5233 /* eomt_newrelationship.tiff in Resources */,
+				06872DA417501852005F5233 /* eomt_paste.tiff in Resources */,
+				06872DA517501852005F5233 /* eomt_undo.tiff in Resources */,
+				06749E5117525A81001BCE2B /* AttributeInspector.tiff in Resources */,
+				06749E5217525A81001BCE2B /* EntityInspector.tiff in Resources */,
+				06749E5317525A81001BCE2B /* ModelInspector.png in Resources */,
+				06749E5417525A81001BCE2B /* RelationshipInspector.tiff in Resources */,
+				06749E62175278FF001BCE2B /* UserDictionaryInspector.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06A29B73173C705800045AE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A29B87173C705800045AE6 /* main.m in Sources */,
+				06A29B8E173C705800045AE6 /* OCSModel.m in Sources */,
+				06FB681B1CA377E40010D7E2 /* NSTimer+OCSTimerExtensions.m in Sources */,
+				06FB68191CA377E40010D7E2 /* NSObject+OCSObjectExtensions.m in Sources */,
+				06A29BC81744EA2700045AE6 /* OCSAppDelegate.m in Sources */,
+				06FB68111CA376C00010D7E2 /* NSError+OCSErrorExtensions.m in Sources */,
+				064A1FCE1748CDAD00DD9766 /* OCSNamedValueTransformer.m in Sources */,
+				066DA46C174EE61200F2248B /* OCSModel+SQLGeneration.m in Sources */,
+				06FB68281CA607670010D7E2 /* EOModel+FileAccess.m in Sources */,
+				066DA472174EE7C500F2248B /* OCSModel+FileAccess.m in Sources */,
+				066DA475174EE88600F2248B /* OCSModel+SplitViewDelegate.m in Sources */,
+				066DA478174EE98C00F2248B /* OCSModel+TableViewDelegate.m in Sources */,
+				066DA480174F95CF00F2248B /* OCSModelGroup.m in Sources */,
+				066DA486174FA6AC00F2248B /* OCSEntitiesAC.m in Sources */,
+				066DA489174FB11F00F2248B /* OCSAttributesAC.m in Sources */,
+				066DA48C174FB13800F2248B /* OCSRelationshipsAC.m in Sources */,
+				06FB68251CA46E560010D7E2 /* EORelationship.m in Sources */,
+				06872DA8175026F6005F5233 /* OCS_AC.m in Sources */,
+				06FB681A1CA377E40010D7E2 /* NSString+OCSStringExtensions.m in Sources */,
+				06872DAF1750EBAE005F5233 /* OCSInspectorVC.m in Sources */,
+				06FB68181CA377E40010D7E2 /* NSMutableDictionary+OCSMutableDictionaryExtensions.m in Sources */,
+				06FB681F1CA37DED0010D7E2 /* EOEntity.m in Sources */,
+				06FB680C1CA35BD60010D7E2 /* EOModel.m in Sources */,
+				06FB68221CA384E90010D7E2 /* EOAttribute.m in Sources */,
+				06FB681C1CA377E40010D7E2 /* NSURL+OCSURLExtensions.m in Sources */,
+				06FB682B1CA6085B0010D7E2 /* EOEntity+FileAccess.m in Sources */,
+				06FB680F1CA35E680010D7E2 /* EOObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		06A29B83173C705800045AE6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06A29B84173C705800045AE6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		06A29B89173C705800045AE6 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06A29B8A173C705800045AE6 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		06A29B8F173C705800045AE6 /* OCSModel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06A29B90173C705800045AE6 /* en */,
+			);
+			name = OCSModel.xib;
+			sourceTree = "<group>";
+		};
+		06A29B92173C705800045AE6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06A29B93173C705800045AE6 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06A29B95173C705800045AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		06A29B96173C705800045AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		06A29B98173C705800045AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EOModeller/EOModeller-Prefix.pch";
+				INFOPLIST_FILE = "EOModeller/EOModeller-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		06A29B99173C705800045AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EOModeller/EOModeller-Prefix.pch";
+				INFOPLIST_FILE = "EOModeller/EOModeller-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06A29B72173C705800045AE6 /* Build configuration list for PBXProject "EOModeller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06A29B95173C705800045AE6 /* Debug */,
+				06A29B96173C705800045AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06A29B97173C705800045AE6 /* Build configuration list for PBXNativeTarget "EOModeller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06A29B98173C705800045AE6 /* Debug */,
+				06A29B99173C705800045AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06A29B6F173C705800045AE6 /* Project object */;
+}
