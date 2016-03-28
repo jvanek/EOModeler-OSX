@@ -26,6 +26,7 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 - ensured the lists in model window are by default sorted by name
 - moved fixed lists to Preferences. No GUI, but added a Prefs window which hints what to do
 - activated SQL generation and improved it to support adding columns
+- fixed the installed-accessor bug, was not Apple's, but mine all the time. D'oh!
 
 === 2.0 ===
 First published version, somewhat useable, though not much. No documentation at all

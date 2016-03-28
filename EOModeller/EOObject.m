@@ -90,7 +90,7 @@
 }
 
 
-// all the code below just makes sure appropriate rawContents-based getters and setters are installed for all dynamic properties; also, there's a DIRTY trick working-around much DIRTIER Apple howler, that KVC does not work properly with installed accessors
+// all the code below just makes sure appropriate rawContents-based getters and setters are installed for all dynamic properties
 inline static NSString *set2key(NSString *set) {
     return [[[set substringWithRange:NSMakeRange(3, 1)] lowercaseString] stringByAppendingString:[set substringWithRange:NSMakeRange(4, set.length-5)]];
 }
@@ -138,7 +138,6 @@ static void setterIMPb(EOObject *self,SEL cmd,BOOL value) {
     settercmd(self,cmd,value?@"Y":@"N");
 }
 
-static NSMutableDictionary *installedGettersByClass,*installedBoolGettersByClass;
 static inline NSString *clname(Class class) {
     NSString *name=NSStringFromClass(class);
     if (![name hasPrefix:@"NSKVONotifying_"]) return name;
@@ -169,69 +168,17 @@ static inline NSString *setter(NSString *getter) {
                 boolean=!strcmp(type,"c");
                 free(type);
             }
-            static dispatch_once_t onceToken;
-            dispatch_once(&onceToken, ^{
-                installedGettersByClass=[NSMutableDictionary dictionary];
-                installedBoolGettersByClass=[NSMutableDictionary dictionary];
-            });
-            //NSLog(@"  installing %@/%@ bool %d",key,setter(key),boolean);
-            NSString *ckey=clname(self);
-            NSMutableDictionary *installed=boolean?installedBoolGettersByClass:installedGettersByClass;
-            NSMutableSet *getrs=installed[ckey];
-            if (!getrs) {
-                NSString *sckey=clname([self superclass]);
-                installed[ckey]=getrs=[installed[sckey] mutableCopy]?:[NSMutableSet set];
-            }
-            [getrs addObject:key];
             if (boolean) {
-                class_addMethod(self, NSSelectorFromString(key), (IMP)getterIMPb, @encode(BOOL(*)(id,SEL)));
-                class_addMethod(self, NSSelectorFromString(setter(key)), (IMP)setterIMPb, @encode(void(*)(id,SEL,BOOL)));
+                class_addMethod(self, NSSelectorFromString(key), (IMP)getterIMPb, "c@:");
+                class_addMethod(self, NSSelectorFromString(setter(key)), (IMP)setterIMPb, "v@:c");
             } else {
-                class_addMethod(self, NSSelectorFromString(key), (IMP)getterIMP, @encode(id(*)(id,SEL)));
-                class_addMethod(self, NSSelectorFromString(setter(key)), (IMP)setterIMP, @encode(void(*)(id,SEL,id)));
+                class_addMethod(self, NSSelectorFromString(key), (IMP)getterIMP, "@@:");
+                class_addMethod(self, NSSelectorFromString(setter(key)), (IMP)setterIMP, "v@:@");
             }
         }
     }
     if (prop) free(prop);
 }
-#pragma clang diagnostic push // damn the ARC thing to deep hell :(
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
--(BOOL)__boolGetterPrototype { return NO; }
--(void)__boolSetterPrototype:(BOOL)val { }
--(id)valueForUndefinedKey:(NSString*)key {
-    NSString *cln=clname(self.class);
-    if ([installedGettersByClass[cln] containsObject:key])
-        return [self performSelector:NSSelectorFromString(key)];
-    else if ([installedBoolGettersByClass[cln] containsObject:key]) {
-        NSInvocation *inv=[NSInvocation invocationWithMethodSignature:
-                           [self methodSignatureForSelector:@selector(__boolGetterPrototype)]
-                           //[NSMethodSignature signatureWithObjCTypes:@encode(BOOL(*)(id,SEL))]
-                           ];
-        inv.target=self;
-        inv.selector=NSSelectorFromString(key);
-        [inv invoke];
-        BOOL retval=NO;
-        [inv getReturnValue:&retval];
-        return @(retval);
-    } else return [super valueForUndefinedKey:key];
-}
--(void)setValue:(id)value forUndefinedKey:(NSString*)key {
-    NSString *cln=clname(self.class);
-    if ([installedGettersByClass[cln] containsObject:key])
-        [self performSelector:NSSelectorFromString(setter(key)) withObject:value];
-    else if ([installedBoolGettersByClass[cln] containsObject:key]) {
-        NSInvocation *inv=[NSInvocation invocationWithMethodSignature:
-                           [self methodSignatureForSelector:@selector(__boolSetterPrototype:)]
-                           //[NSMethodSignature signatureWithObjCTypes:@encode(void(*)(id,SEL,BOOL))]
-                           ];
-        inv.target=self;
-        inv.selector=NSSelectorFromString(setter(key));
-        BOOL arg=[value boolValue];
-        [inv setArgument:&arg atIndex:2];
-        [inv invoke];
-    } else [super setValue:value forUndefinedKey:key];
-}
-#pragma clang diagnostic pop
 @end
 
 NSString * const EOObjectDidChangeNotification=@"EOObjectDidChangeNotification";
