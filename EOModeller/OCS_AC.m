@@ -3,7 +3,7 @@
 //  EOModeller
 //
 //  Created by OC on 5/25/13.
-//  Copyright (c) 2013 OC. All rights reserved.
+//  Copyleft (c) 2013 OC. No rights reserved, what for, on earth?.
 //
 
 #import "OCS_AC.h"
@@ -36,6 +36,11 @@
 -(id)newObject {
     NSAssert(NO,@"newObject not overridden for %@!",self.objectClass);
     return nil;
+}
+
+-(void)awakeFromNib {
+    [super awakeFromNib];
+    self.sortDescriptors=@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
 }
 @end
 

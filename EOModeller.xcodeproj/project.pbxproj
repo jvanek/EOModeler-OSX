@@ -135,6 +135,7 @@
 		06A29B9A173C712F00045AE6 /* EOapp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = EOapp.icns; sourceTree = "<group>"; };
 		06A29BC61744EA2700045AE6 /* OCSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSAppDelegate.h; sourceTree = "<group>"; };
 		06A29BC71744EA2700045AE6 /* OCSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSAppDelegate.m; sourceTree = "<group>"; };
+		06C002601CA829DD0070C1C2 /* History.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = History.txt; sourceTree = "<group>"; };
 		06FB680A1CA35BD60010D7E2 /* EOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOModel.h; sourceTree = "<group>"; };
 		06FB680B1CA35BD60010D7E2 /* EOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOModel.m; sourceTree = "<group>"; };
 		06FB680D1CA35E680010D7E2 /* EOObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOObject.h; sourceTree = "<group>"; };
@@ -154,7 +155,6 @@
 		06FB68241CA46E560010D7E2 /* EORelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EORelationship.m; sourceTree = "<group>"; };
 		06FB68271CA607670010D7E2 /* EOModel+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOModel+FileAccess.m"; sourceTree = "<group>"; };
 		06FB682A1CA6085B0010D7E2 /* EOEntity+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOEntity+FileAccess.m"; sourceTree = "<group>"; };
-		D89A54471CA7E2A0009E276E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,7 +241,7 @@
 		06A29B6E173C705800045AE6 = {
 			isa = PBXGroup;
 			children = (
-				D89A54471CA7E2A0009E276E /* README.md */,
+				06C002601CA829DD0070C1C2 /* History.txt */,
 				06A29B9C173C745D00045AE6 /* Shared */,
 				06A29B80173C705800045AE6 /* EOModeller */,
 				06A29B79173C705800045AE6 /* Frameworks */,

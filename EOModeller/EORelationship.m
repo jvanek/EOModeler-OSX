@@ -3,7 +3,7 @@
 //  EOModeller
 //
 //  Created by OC on 24.03.16.
-//  Copyright (c) 2016 OC. All rights reserved.
+//  Copyleft (c) 2016 OC. No rights reserved, what for, on earth?.
 //
 
 #import "EOModel.h"
@@ -34,19 +34,6 @@ GenerateISAccessors(entity,ClassProperty,classProperties)
 -(NSArray*)availableJoinSemantics {
     return @[@"EOInnerJoin", @"EOFullOuterJoin", @"EOLeftOuterJoin", @"EORightOuterJoin"];
 }
-
-//-(NSString*)displayRelationshipSourceAttribute {
-//    return [[self.joins valueForKey:@"sourceAttribute"] componentsJoinedByString:@"~"];
-//}
-//+(NSSet*)keyPathsForValuesAffectingDisplayRelationshipSourceAttribute {
-//    return [NSSet setWithObjects:@"joins",@"joins.sourceAttribute", nil];
-//}
-//-(NSString*)displayRelationshipDestinationAttribute {
-//    return [[self.joins valueForKey:@"destinationAttribute"] componentsJoinedByString:@"~"];
-//}
-//+(NSSet*)keyPathsForValuesAffectingdisplayRelationshipDestinationAttribute {
-//    return [NSSet setWithObjects:@"joins",@"joins.destinationAttribute", nil];
-//}
 
 -(NSString*)displayRelationshipJointDescription {
     NSString *flat=self.definition;

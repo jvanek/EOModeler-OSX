@@ -3,14 +3,12 @@
 //  EOModeller
 //
 //  Created by OC on 5/10/13.
-//  Copyright (c) 2013 OC. All rights reserved.
+//  Copyleft (c) 2013 OC. No rights reserved, what for, on earth?.
 //
 
 @class EOModel,OCSEntitiesAC,OCSAttributesAC,OCSRelationshipsAC;
 
-@interface OCSModel:NSDocument <NSSplitViewDelegate,NSTableViewDelegate> {
-    NSIndexSet *currentSelection; // used in Table Delegate, temporarily
-}
+@interface OCSModel:NSDocument <NSSplitViewDelegate,NSTableViewDelegate> 
 @property (retain,nonatomic) EOModel *model;
 
 @property (retain,nonatomic) IBOutlet NSWindow *sqlWindow; // so as it does not get released
@@ -28,6 +26,6 @@
 
 @property (readonly) BOOL smartSort;
 
-@property (readonly,nonatomic) NSMutableDictionary *externalIndexAccess;
+@property (readonly) id currentACController; // the currently selected one of entity/attribute/relationship controllers, if any
 @end
 

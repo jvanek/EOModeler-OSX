@@ -1,9 +1,9 @@
 //
 //  NSTimer+OCSTimerExtensions.m
-//  Sticky Password
+//  EOModeller
 //
 //  Created by OC on 13.7.15.
-//  Copyright (c) 2015 Lamantine a.s. All rights reserved.
+//  Copyleft (c) 2016 OC. No rights reserved, what for, on earth?.
 //
 
 @implementation NSTimer (OCSTimerExtensions)

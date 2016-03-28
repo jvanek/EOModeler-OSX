@@ -3,7 +3,7 @@
 //  EOModeller
 //
 //  Created by OC on 5/25/13.
-//  Copyright (c) 2013 OC. All rights reserved.
+//  Copyleft (c) 2013 OC. No rights reserved, what for, on earth?.
 //
 
 @class OCSModel,EOObject;

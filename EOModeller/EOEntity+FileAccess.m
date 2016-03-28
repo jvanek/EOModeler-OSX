@@ -3,7 +3,7 @@
 //  EOModeller
 //
 //  Created by OC on 26.03.16.
-//  Copyright (c) 2016 OC. All rights reserved.
+//  Copyleft (c) 2016 OC. No rights reserved, what for, on earth?.
 //
 
 #import "EOEntity.h"
@@ -73,7 +73,6 @@
     return YES;
 }
 -(NSArray*)fileWrappersError:(NSError *__autoreleasing *)error {
-#warning Validate
     // note that attribute/relationshipDicts are kept up to date all the time
     if (!self.rawContents) {
         if (error) *error=OCSERROR(@"The entity '%@' is invalid, there is no data",self.name);

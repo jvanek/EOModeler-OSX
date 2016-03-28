@@ -3,7 +3,7 @@
 //  EOModeller
 //
 //  Created by OC on 24.03.16.
-//  Copyright (c) 2016 OC. All rights reserved.
+//  Copyleft (c) 2016 OC. No rights reserved, what for, on earth?.
 //
 
 // represents an entity in a model

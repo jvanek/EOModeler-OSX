@@ -1,0 +1,34 @@
+There's no licence for this code, I don't like lawspeak anyway. Simply use it without any limitation in any way you want to, that's all. The only guarantee there is there are bugs in the code :) With any questions or comments, contact me please at ocs (at) ocs (dot) cz.
+
+=== known TODOs ===
+- raw dict editor for all items (either improved raw viewer, or text-based)
+- model group support
+- validations (when saving, before SQL generation, when user asks to, in reasonable extent automatically...)
+- reasonable prototype support (can't be done before model groups)
+- undo with UserInfo editor
+- smart relationship editor, M:N management etc
+- fetch spec editor, even if textedit :)
+- better SQL generation with customizable templates (perhaps flexible enough for Java generation too, presumed anyone still uses that EOGenerator thing?)
+- model creation (which would work, unlike the current model creation :))
+- stored procedures... does anybody use the thing?
+- entity indexes
+=== convenience and aesthetics ===
+- make smartsort model-based, not global
+- cut/copy/paste/dragdrop model objects
+- drag-based relationship creation
+- why the hell up/down arrows do not work in attribute/relationship lists?!?
+
+=== 2.1 ===
+
+- added this History file to keep track of changes and todos
+- slightly cleaned up sources, removed some old out-commented nonsense etc, made sure there are no warnings (LLVM 5.1, did not test elsewhere)
+- added menu alternatives for toolbar items
+- ensured the lists in model window are by default sorted by name
+- moved fixed lists to Preferences. No GUI, but added a Prefs window which hints what to do
+- activated SQL generation and improved it to support adding columns
+
+=== 2.0 ===
+First published version, somewhat useable, though not much. No documentation at all
+
+=== 1.0 ===
+An attempt to create a Modeller ages ago, never really worked :)

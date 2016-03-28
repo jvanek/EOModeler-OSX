@@ -3,7 +3,7 @@
 //  EOModeller
 //
 //  Created by OC on 24.03.16.
-//  Copyright (c) 2016 OC. All rights reserved.
+//  Copyleft (c) 2016 OC. No rights reserved, what for, on earth?.
 //
 
 #import "EOAttribute.h"
@@ -30,47 +30,17 @@ GenerateISAccessors(entity,UsedForLocking,attributesUsedForLocking)
 GenerateISAccessors(entity,ClassProperty,classProperties)
 GenerateISAccessors(entity,PrimaryKey,primaryKeyAttributes)
 
+-(NSArray*)availableSQLTypes {
+    return [NSUserDefaults.standardUserDefaults arrayForKey:@"DefaultAttributeSQLTypes"];
+}
 -(NSArray*)availableClassNames {
-#warning Move all these things (also below) to Preferences and make editable
-    return @[@"NSString", @"NSNumber", @"NSDecimalNumber", @"NSCalendarDate", @"NSData"];
+    return [NSUserDefaults.standardUserDefaults arrayForKey:@"DefaultAttributeClassNames"];
 }
 -(NSArray*)factoryMethodArgumentAvailableTypes {
     return @[@"EOFactoryMethodArgumentIsBytes", @"EOFactoryMethodArgumentIsData", @"EOFactoryMethodArgumentIsString"];
-//    static NSArray *std;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        std=@[@"EOFactoryMethodArgumentIsBytes", @"EOFactoryMethodArgumentIsData", @"EOFactoryMethodArgumentIsString"];
-//    });
-//    if (!self.factoryMethodArgumentType || [std containsObject:self.factoryMethodArgumentType]) return  std;
-//    NSMutableArray *ma=[std mutableCopy];
-//    [ma addObject:self.factoryMethodArgumentType];
-//    return ma;
 }
-//+(NSSet*)keyPathsForValuesAffectingFactoryMethodArgumentAvailableTypes {
-//    return [NSSet setWithObject:@"factoryMethodArgumentType"];
-//}
-
 -(NSArray*)availableValueTypeDisplayItems {
-    static NSDictionary *std;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        // note: none of strings should start with "No ", see [*]
-        std=@{
-              @"NSString":@[
-                      @"Auto string/stream", @"Stream (C)", @"Trim (c)", @"Encoded (E)", @"String (S)",
-                      ],
-              @"NSNumber":@[
-                      @"BigDecimal (B)", @"Byte (b)", @"Boolean (c)", @"Double (d)", @"Float (f)", @"Integer (i)", @"Long (l)", @"Short (s)",
-                      ],
-              @"NSDecimalNumber":@[
-                      @"BigDecimal (B)"
-                      ],
-              @"NSCalendarDate":@[
-                      @"Automatic", @"Date (D)", @"M$-SQL Date (M)", @"Time (t)", @"Timestamp (T)",
-                      ],
-              };
-    });
-    return std[self.className];
+    return [NSUserDefaults.standardUserDefaults dictionaryForKey:@"ValueTypesByClassName"][self.className];
 }
 +(NSSet*)keyPathsForValuesAffectingAvailableValueTypeDisplayItems {
     return [NSSet setWithObject:@"className"];

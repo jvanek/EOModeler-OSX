@@ -3,7 +3,7 @@
 //  EOModeller
 //
 //  Created by OC on 5/10/13.
-//  Copyright (c) 2013 OC. All rights reserved.
+//  Copyleft (c) 2013 OC. No rights reserved, what for, on earth?.
 //
 
 #import "OCSModel.h"
@@ -44,19 +44,23 @@
     [undo[@"object"] setValue:undo[@"old"] forKeyPath:undo[@"keypath"]];
 }
 
--(void)delete:sender {
-#warning Fix dupped code in InspectorVC
-    id fr=[[NSApp mainWindow] firstResponder];
+-(id)currentACController {
+    id fr=[self.entityTable.window firstResponder];
     while (fr && ![fr isKindOfClass:NSTableView.class] && ![fr isKindOfClass:NSWindow.class]) fr=[fr superview];
     if ([fr isKindOfClass:[NSTableView class]]) {
         id controller=[fr infoForBinding:@"content"][@"NSObservedObject"];
-        if ([controller isKindOfClass:OCS_AC.class]) {
-            NSArray *robj=[controller selectedObjects];
-            [controller remove:self];
-            [self.undoManager registerUndoWithTarget:controller selector:@selector(addObjects:) object:robj];
-        }
+        if ([controller isKindOfClass:OCS_AC.class]) return controller;
     }
+    return nil;
+}
 
+-(void)delete:sender {
+    id controller=self.currentACController;
+    if (controller) {
+        NSArray *robj=[controller selectedObjects];
+        [controller remove:self];
+        [self.undoManager registerUndoWithTarget:controller selector:@selector(addObjects:) object:robj];
+    }
 }
 
 -(void)encodeRestorableStateWithCoder:(NSCoder *)coder {
@@ -96,5 +100,20 @@
     if (tbi.action==@selector(toggleSmartSortMode:)) tbi.image=[NSImage imageNamed:self.smartSort?@"SmartSort":@"SmartSortOff"];
     return YES;
 }
+-(BOOL)validateMenuItem:(NSMenuItem *)mi {
+    //NSLog(@"model %@ validates mi %@",self,NSStringFromSelector(mi.action));
+    if (mi.action==@selector(toggleSmartSortMode:)) mi.state=self.smartSort?NSOnState:NSOffState;
+    else if (mi.action==@selector(addNewEntity:)) return [self.entityAC canAdd];
+    else if (mi.action==@selector(addNewAttribute:)) return [self.attributesAC canAdd];
+    else if (mi.action==@selector(addNewRelationship:)) return [self.relationshipAC canAdd];
+    return YES;
+}
+
+// these simply redirect for FR, don't add functionality here, if needed, add into ACs
+-(IBAction)addNewEntity:sender { [self.entityAC add:sender]; }
+-(IBAction)addNewAttribute:sender { [self.attributesAC add:sender]; }
+-(IBAction)addNewRelationship:sender { [self.relationshipAC add:sender]; }
+
+-(IBAction)toggleModelInspector:sender { [self.inspectorDrawer toggle:sender]; }
 @end
 

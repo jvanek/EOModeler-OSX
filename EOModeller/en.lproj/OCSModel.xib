@@ -174,7 +174,7 @@
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
-                                                            <imageCell key="dataCell" alignment="left" image="SymbolClassT" id="100342"/>
+                                                            <imageCell key="dataCell" alignment="left" id="100342"/>
                                                             <connections>
                                                                 <binding destination="100159" name="value" keyPath="arrangedObjects.isPrimaryKey" id="q18-pk-tee">
                                                                     <dictionary key="options">
@@ -189,7 +189,7 @@
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
-                                                            <imageCell key="dataCell" alignment="left" imageScaling="proportionallyDown" id="100344"/>
+                                                            <imageCell key="dataCell" alignment="left" id="100344"/>
                                                             <connections>
                                                                 <binding destination="100159" name="value" keyPath="arrangedObjects.isClassProperty" id="Fim-4A-g2t">
                                                                     <dictionary key="options">
@@ -204,7 +204,7 @@
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
-                                                            <imageCell key="dataCell" alignment="left" imageScaling="proportionallyDown" id="100346"/>
+                                                            <imageCell key="dataCell" alignment="left" id="100346"/>
                                                             <connections>
                                                                 <binding destination="100159" name="value" keyPath="arrangedObjects.isUsedForLocking" id="yu5-1C-9Ps">
                                                                     <dictionary key="options">
@@ -219,7 +219,7 @@
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
-                                                            <imageCell key="dataCell" alignment="left" imageScaling="proportionallyDown" id="100345"/>
+                                                            <imageCell key="dataCell" alignment="left" id="100345"/>
                                                             <connections>
                                                                 <binding destination="100159" name="value" keyPath="arrangedObjects.allowsNull" id="100349">
                                                                     <dictionary key="options">
@@ -584,16 +584,16 @@
                                     <tabViewItems>
                                         <tabViewItem label="model" identifier="model" id="100494">
                                             <view key="view" id="100497">
-                                                <rect key="frame" x="0.0" y="0.0" width="683" height="381"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="683" height="631"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <imageView translatesAutoresizingMaskIntoConstraints="NO" id="100638">
-                                                        <rect key="frame" x="615" y="313" width="48" height="48"/>
+                                                        <rect key="frame" x="615" y="563" width="48" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="ModelInspector" id="100639"/>
                                                     </imageView>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kEb-Dm-gTg">
-                                                        <rect key="frame" x="123" y="339" width="96" height="22"/>
+                                                        <rect key="frame" x="123" y="589" width="96" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="96" id="JEW-OG-Nz3"/>
@@ -616,7 +616,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WHM-8K-uQT">
-                                                        <rect key="frame" x="17" y="341" width="99" height="17"/>
+                                                        <rect key="frame" x="17" y="591" width="99" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Model Version:" id="6Vq-1y-gPQ">
                                                             <font key="font" metaFont="system"/>
@@ -625,7 +625,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kyz-BH-dHm">
-                                                        <rect key="frame" x="17" y="310" width="33" height="17"/>
+                                                        <rect key="frame" x="17" y="560" width="33" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="URL:" id="OoZ-Hf-La5">
                                                             <font key="font" metaFont="system"/>
@@ -634,7 +634,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-FY-iQU">
-                                                        <rect key="frame" x="355" y="339" width="252" height="22"/>
+                                                        <rect key="frame" x="355" y="589" width="252" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="uPf-Pa-Atx">
                                                             <font key="font" metaFont="system"/>
@@ -654,7 +654,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1BL-kW-sjZ">
-                                                        <rect key="frame" x="249" y="341" width="106" height="17"/>
+                                                        <rect key="frame" x="249" y="591" width="106" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="100" id="guc-Dl-jKv"/>
@@ -666,7 +666,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jl8-ZB-ggs">
-                                                        <rect key="frame" x="123" y="260" width="484" height="69"/>
+                                                        <rect key="frame" x="123" y="510" width="484" height="69"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="69" id="Ddn-Y3-uzK"/>
@@ -689,7 +689,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-tk-8ca">
-                                                        <rect key="frame" x="20" y="182" width="390" height="17"/>
+                                                        <rect key="frame" x="20" y="432" width="390" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Other models in model group... oops, not implemented yet :)" id="mxg-fN-QNh">
                                                             <font key="font" metaFont="system"/>
@@ -828,11 +828,6 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <binding destination="100027" name="textColor" keyPath="selection.isGenericRecord" id="P7x-KV-Agh">
-                                                                <dictionary key="options">
-                                                                    <string key="NSValueTransformerName">OCSBoolToColorTransformer_gray_black</string>
-                                                                </dictionary>
-                                                            </binding>
                                                             <binding destination="100027" name="value" keyPath="selection.className" id="LkH-Bc-Uhp">
                                                                 <dictionary key="options">
                                                                     <string key="NSMultipleValuesPlaceholder">- multiple -</string>
@@ -840,6 +835,11 @@
                                                                     <string key="NSNotApplicablePlaceholder">???</string>
                                                                     <string key="NSNullPlaceholder">- empty: edit name to set suggested value -</string>
                                                                     <bool key="NSValidatesImmediately" value="YES"/>
+                                                                </dictionary>
+                                                            </binding>
+                                                            <binding destination="100027" name="textColor" keyPath="selection.isGenericRecord" id="P7x-KV-Agh">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">OCSBoolToColorTransformer_gray_black</string>
                                                                 </dictionary>
                                                             </binding>
                                                         </connections>
@@ -1094,9 +1094,8 @@
                                                             <font key="font" size="12" name="STIXGeneral-Bold"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <binding destination="100027" name="argument" keyPath="selection.name" id="nVr-3M-x0f">
+                                                            <binding destination="100027" name="target" keyPath="selection" previousBinding="nVr-3M-x0f" id="nWB-03-eeN">
                                                                 <dictionary key="options">
-                                                                    <bool key="NSAllowsNullArgument" value="YES"/>
                                                                     <string key="NSSelectorName">setDefaultNames:</string>
                                                                 </dictionary>
                                                             </binding>
@@ -1108,8 +1107,9 @@
                                                                     <integer key="NSNullPlaceholder" value="0"/>
                                                                 </dictionary>
                                                             </binding>
-                                                            <binding destination="100027" name="target" keyPath="selection" previousBinding="nVr-3M-x0f" id="nWB-03-eeN">
+                                                            <binding destination="100027" name="argument" keyPath="selection.name" id="nVr-3M-x0f">
                                                                 <dictionary key="options">
+                                                                    <bool key="NSAllowsNullArgument" value="YES"/>
                                                                     <string key="NSSelectorName">setDefaultNames:</string>
                                                                 </dictionary>
                                                             </binding>
@@ -1260,11 +1260,6 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <binding destination="100159" name="textColor" keyPath="selection.isDerived" id="aPH-l8-MBl">
-                                                                <dictionary key="options">
-                                                                    <string key="NSValueTransformerName">OCSBoolToColorTransformer_red_black</string>
-                                                                </dictionary>
-                                                            </binding>
                                                             <binding destination="100159" name="value" keyPath="selection.columnName" id="pEw-yf-cw3">
                                                                 <dictionary key="options">
                                                                     <string key="NSMultipleValuesPlaceholder">- multiple -</string>
@@ -1272,6 +1267,11 @@
                                                                     <string key="NSNotApplicablePlaceholder">???</string>
                                                                     <string key="NSNullPlaceholder">- empty: edit name to set suggested value -</string>
                                                                     <bool key="NSValidatesImmediately" value="YES"/>
+                                                                </dictionary>
+                                                            </binding>
+                                                            <binding destination="100159" name="textColor" keyPath="selection.isDerived" id="aPH-l8-MBl">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">OCSBoolToColorTransformer_red_black</string>
                                                                 </dictionary>
                                                             </binding>
                                                         </connections>
@@ -1652,6 +1652,11 @@
                                                             <font key="font" size="12" name="STIXGeneral-Bold"/>
                                                         </buttonCell>
                                                         <connections>
+                                                            <binding destination="100159" name="target" keyPath="selection" previousBinding="6HI-0h-Rfd" id="iaO-Kh-kuJ">
+                                                                <dictionary key="options">
+                                                                    <string key="NSSelectorName">forceDefaultNames:</string>
+                                                                </dictionary>
+                                                            </binding>
                                                             <binding destination="100159" name="argument" keyPath="selection.name" id="6HI-0h-Rfd">
                                                                 <dictionary key="options">
                                                                     <bool key="NSAllowsNullArgument" value="YES"/>
@@ -1665,11 +1670,6 @@
                                                                     <integer key="NSNotApplicablePlaceholder" value="0"/>
                                                                     <integer key="NSNullPlaceholder" value="0"/>
                                                                     <string key="NSValueTransformerName">NSIsNotNil</string>
-                                                                </dictionary>
-                                                            </binding>
-                                                            <binding destination="100159" name="target" keyPath="selection" previousBinding="6HI-0h-Rfd" id="iaO-Kh-kuJ">
-                                                                <dictionary key="options">
-                                                                    <string key="NSSelectorName">forceDefaultNames:</string>
                                                                 </dictionary>
                                                             </binding>
                                                         </connections>
@@ -1717,7 +1717,8 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </comboBoxCell>
                                                         <connections>
-                                                            <binding destination="100159" name="value" keyPath="selection.externalType" id="m6T-jx-Qwj">
+                                                            <binding destination="100159" name="contentValues" keyPath="selection.availableSQLTypes" id="pE2-14-Ib9"/>
+                                                            <binding destination="100159" name="value" keyPath="selection.externalType" previousBinding="pE2-14-Ib9" id="W0b-R2-kGF">
                                                                 <dictionary key="options">
                                                                     <bool key="NSConditionallySetsEditable" value="YES"/>
                                                                     <bool key="NSConditionallySetsEnabled" value="NO"/>
@@ -1770,7 +1771,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="d5d-aZ-5Ud" id="jd0-PK-g1u">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="menu"/>
                                                             <menu key="menu" title="OtherViews" id="ISS-Ym-IOp">
                                                                 <items>
                                                                     <menuItem title="Item 1" state="on" id="d5d-aZ-5Ud"/>
@@ -1837,7 +1838,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="bfC-U7-xrd" id="PEg-SG-jfc">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="menu"/>
                                                             <menu key="menu" title="OtherViews" id="BP3-pH-SOn">
                                                                 <items>
                                                                     <menuItem title="Item 1" state="on" id="bfC-U7-xrd"/>
@@ -2023,12 +2024,12 @@
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q0h-EG-ajL">
-                                                        <rect key="frame" x="17" y="591" width="110" height="17"/>
+                                                        <rect key="frame" x="2" y="591" width="125" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="104" id="c8O-yc-iWb"/>
+                                                            <constraint firstAttribute="width" constant="119" id="c8O-yc-iWb"/>
                                                         </constraints>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Relation name:" id="nP9-Y5-Wj0">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Relationship name:" id="nP9-Y5-Wj0">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2096,11 +2097,6 @@
                                                         </comboBoxCell>
                                                         <connections>
                                                             <binding destination="100160" name="contentValues" keyPath="selection.availableTargetEntitiyNames" id="WQC-ay-ylS"/>
-                                                            <binding destination="100160" name="textColor" keyPath="selection.isFlattened" id="Ig0-oj-vhc">
-                                                                <dictionary key="options">
-                                                                    <string key="NSValueTransformerName">OCSBoolToColorTransformer_red_black</string>
-                                                                </dictionary>
-                                                            </binding>
                                                             <binding destination="100160" name="value" keyPath="selection.destination" previousBinding="WQC-ay-ylS" id="e2i-rj-KFU">
                                                                 <dictionary key="options">
                                                                     <bool key="NSConditionallySetsEditable" value="YES"/>
@@ -2110,6 +2106,11 @@
                                                                     <string key="NSNotApplicablePlaceholder">???</string>
                                                                     <string key="NSNullPlaceholder">- not set -</string>
                                                                     <bool key="NSValidatesImmediately" value="YES"/>
+                                                                </dictionary>
+                                                            </binding>
+                                                            <binding destination="100160" name="textColor" keyPath="selection.isFlattened" id="Ig0-oj-vhc">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">OCSBoolToColorTransformer_red_black</string>
                                                                 </dictionary>
                                                             </binding>
                                                         </connections>
@@ -2172,7 +2173,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="rNE-Bg-jkz" id="LQ0-Y5-ngV">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="menu"/>
                                                             <menu key="menu" title="OtherViews" id="UDk-Oe-KQY">
                                                                 <items>
                                                                     <menuItem title="Item 1" state="on" id="rNE-Bg-jkz"/>
@@ -2238,6 +2239,11 @@
                                                             <font key="font" size="12" name="STIXGeneral-Bold"/>
                                                         </buttonCell>
                                                         <connections>
+                                                            <binding destination="100160" name="target" keyPath="selection" id="VxQ-M5-J5r">
+                                                                <dictionary key="options">
+                                                                    <string key="NSSelectorName">removeAllJoins</string>
+                                                                </dictionary>
+                                                            </binding>
                                                             <binding destination="100160" name="enabled" keyPath="selection.displayJoins" id="Weu-RO-F9d">
                                                                 <dictionary key="options">
                                                                     <integer key="NSMultipleValuesPlaceholder" value="0"/>
@@ -2245,11 +2251,6 @@
                                                                     <integer key="NSNotApplicablePlaceholder" value="0"/>
                                                                     <integer key="NSNullPlaceholder" value="0"/>
                                                                     <string key="NSValueTransformerName">NSIsNotNil</string>
-                                                                </dictionary>
-                                                            </binding>
-                                                            <binding destination="100160" name="target" keyPath="selection" id="VxQ-M5-J5r">
-                                                                <dictionary key="options">
-                                                                    <string key="NSSelectorName">removeAllJoins</string>
                                                                 </dictionary>
                                                             </binding>
                                                         </connections>
@@ -2309,7 +2310,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="R9g-MB-B7l" id="ZOn-Ow-zA0">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="menu"/>
                                                             <menu key="menu" title="OtherViews" id="HlC-Ke-AKn">
                                                                 <items>
                                                                     <menuItem title="Item 1" state="on" id="R9g-MB-B7l"/>
@@ -2782,7 +2783,6 @@
         <image name="ModelInspector" width="48" height="48"/>
         <image name="RelationshipInspector" width="48" height="48"/>
         <image name="SmartSortOff" width="90" height="90"/>
-        <image name="SymbolClassT" width="128" height="128"/>
         <image name="eomt_copy" width="22" height="22"/>
         <image name="eomt_cut" width="22" height="22"/>
         <image name="eomt_delete" width="22" height="22"/>

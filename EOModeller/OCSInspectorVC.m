@@ -3,7 +3,7 @@
 //  EOModeller
 //
 //  Created by OC on 5/25/13.
-//  Copyright (c) 2013 OC. All rights reserved.
+//  Copyleft (c) 2013 OC. No rights reserved, what for, on earth?.
 //
 
 #import "OCSInspectorVC.h"
@@ -43,14 +43,10 @@
         selection=[object selectedObjects];
         if (!selection.count) tvid=[tvid isEqualToString:@"entity"]?@"model":@"";
     } else if ([keyPath isEqualToString:@"firstResponder"]) {
-        id fr=[object firstResponder];
-        while (fr && ![fr isKindOfClass:NSTableView.class] && ![fr isKindOfClass:NSWindow.class]) fr=[fr superview];
-        if ([fr isKindOfClass:[NSTableView class]]) {
-            id controller=[fr infoForBinding:@"content"][@"NSObservedObject"];
-            if ([controller isKindOfClass:OCS_AC.class]) {
-                tvid=[[controller objectClass] typeIdentifier];
-                if ((selection=[controller selectedObjects]).count==0) tvid=[tvid isEqualToString:@"entity"]?@"model":@"";
-            }
+        id controller=self.model.currentACController;
+        if (controller) {
+            tvid=[[controller objectClass] typeIdentifier];
+            if ((selection=[controller selectedObjects]).count==0) tvid=[tvid isEqualToString:@"entity"]?@"model":@"";
         }
     }
     
