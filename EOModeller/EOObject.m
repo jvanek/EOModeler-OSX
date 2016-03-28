@@ -124,7 +124,7 @@ inline static void settercmd(EOObject *self,SEL cmd,id value) {
         md=nmd;
     }
 
-    id oldValue=md[lk];
+    id oldValue=[self valueForKeyPath:key]; // md[lk]; much faster, but did not work well for BOOLs, of course
     if (value) md[lk]=value;
     else [md removeObjectForKey:lk];
     
@@ -153,8 +153,8 @@ static inline NSString *setter(NSString *getter) {
     for (unsigned n=0;n<nprop;n++) {
         char *dyn=property_copyAttributeValue(prop[n],"D");
         if (dyn) {
-            NSString *key=[NSString stringWithUTF8String:property_getName(prop[n])];
             free(dyn);
+            NSString *key=[NSString stringWithUTF8String:property_getName(prop[n])];
 #if 0 // these bloody keys do not seem to be documented anywhere?!?
             unsigned an=0;
             objc_property_attribute_t *all=property_copyAttributeList(prop[n],&an);
