@@ -155,6 +155,8 @@
 		06FB68241CA46E560010D7E2 /* EORelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EORelationship.m; sourceTree = "<group>"; };
 		06FB68271CA607670010D7E2 /* EOModel+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOModel+FileAccess.m"; sourceTree = "<group>"; };
 		06FB682A1CA6085B0010D7E2 /* EOEntity+FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOEntity+FileAccess.m"; sourceTree = "<group>"; };
+		D87569301CAAA7FD00ADEEAC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D87569311CAAA7FD00ADEEAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,8 @@
 		06A29B6E173C705800045AE6 = {
 			isa = PBXGroup;
 			children = (
+				D87569301CAAA7FD00ADEEAC /* LICENSE */,
+				D87569311CAAA7FD00ADEEAC /* README.md */,
 				06C002601CA829DD0070C1C2 /* History.txt */,
 				06A29B9C173C745D00045AE6 /* Shared */,
 				06A29B80173C705800045AE6 /* EOModeller */,
