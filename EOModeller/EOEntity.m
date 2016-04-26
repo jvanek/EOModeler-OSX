@@ -33,6 +33,7 @@ GenerateISAccessors(model,SharedEOEntity,entitiesWithSharedObjects)
 
 -(void)insertObject:(EOAttribute*)attr inAttributesAtIndex:(NSUInteger)index {
     attr.entity=self;
+    if (!self.attributeDicts) self.attributeDicts=[NSMutableArray array];
     [(id)self.attributeDicts addObject:attr.rawContents];
     [(id)self.attributes insertObject:attr atIndex:index];
 }
@@ -44,6 +45,7 @@ GenerateISAccessors(model,SharedEOEntity,entitiesWithSharedObjects)
 }
 -(void)insertObject:(EORelationship*)rel inRelationshipsAtIndex:(NSUInteger)index {
     rel.entity=self;
+    if (!self.relationshipDicts) self.relationshipDicts=[NSMutableArray array];
     [(id)self.relationshipDicts addObject:rel.rawContents];
     [(id)self.relationships insertObject:rel atIndex:index];
 }
