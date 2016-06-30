@@ -44,7 +44,7 @@
     [undo[@"object"] setValue:undo[@"old"] forKeyPath:undo[@"keypath"]];
 }
 
--(id)currentACController {
+-(OCS_AC*)currentACController {
     id fr=[self.entityTable.window firstResponder];
     while (fr && ![fr isKindOfClass:NSTableView.class] && ![fr isKindOfClass:NSWindow.class]) fr=[fr superview];
     if ([fr isKindOfClass:[NSTableView class]]) {
@@ -54,10 +54,41 @@
     return nil;
 }
 
+-(BOOL)doCopy {
+    NSArray *selection=self.currentACController.selectedObjects;
+    if (!selection.count) {
+        NSBeep();
+        return NO;
+    }
+    NSPasteboard *pb=NSPasteboard.generalPasteboard;
+    [pb clearContents];
+    [pb writeObjects:selection];
+    return YES;
+}
+-(IBAction)cut:sender {
+    if ([self doCopy]) [self delete:sender];
+}
+-(IBAction)copy:sender {
+    [self doCopy];
+}
+-(IBAction)paste:sender {
+    OCS_AC *controller=self.currentACController;
+    if (!controller.canAdd) return NSBeep();
+    NSPasteboard *pb=NSPasteboard.generalPasteboard;
+#warning Should be smarter to e.g., allow pasting attributes into an entity; also to fix things like classProperty when pasted... later!
+    NSArray *objs=[pb readObjectsForClasses:@[controller.objectClass] options:nil];
+    if (!objs) NSBeep();
+    else {
+        [controller addObjects:objs];
+        // whenInserted... but how, on bloody earth?!?
+        [self.undoManager registerUndoWithTarget:controller selector:@selector(removeObjects:) object:objs];
+    }
+}
+
 -(void)delete:sender {
-    id controller=self.currentACController;
+    OCS_AC *controller=self.currentACController;
     if (controller) {
-        NSArray *robj=[controller selectedObjects];
+        NSArray *robj=controller.selectedObjects;
         [controller remove:self];
         [self.undoManager registerUndoWithTarget:controller selector:@selector(addObjects:) object:robj];
     }

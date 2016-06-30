@@ -13,7 +13,7 @@
 @implementation EOObject
 @dynamic userInfo;
 
--init {
+-init { // see below also initWithPasteboardPropertyList:ofType:
     if (!(self=[super init])) return nil;
     _rawContents=[NSMutableDictionary dictionary];
     return self;
@@ -87,6 +87,36 @@
     NSString *valid=[self.class validNameForName:*name allowDots:YES];
     if (!OCSEquals(valid, *name)) *name=valid;
     return YES;
+}
+
++(NSString*)uti {
+    return [[[NSBundle.mainBundle bundleIdentifier] stringByAppendingString:@"."] stringByAppendingString:self.typeIdentifier];
+}
+
+-(NSArray*)writableTypesForPasteboard:(NSPasteboard*)pasteboard {
+    return @[self.class.uti];
+}
+-(NSPasteboardWritingOptions)writingOptionsForType:(NSString*)type pasteboard:(NSPasteboard*)pasteboard {
+    return NSPasteboardWritingPromised;
+}
+-(void)prepareCopyWithDictionary:(NSMutableDictionary*)data { /* empty, to be overridden */ }
+-(id)pasteboardPropertyListForType:(NSString*)type {
+    NSMutableDictionary *md=[NSMutableDictionary dictionaryWithObject:_rawContents forKey:@"."];
+    [self prepareCopyWithDictionary:md];
+    return [NSKeyedArchiver archivedDataWithRootObject:md];
+}
+
++(NSArray*)readableTypesForPasteboard:(NSPasteboard*)pasteboard {
+    return @[self.uti];
+}
+-(void)finishPasteWithDictionary:(NSDictionary*)data { /* empty, to be overridden */ }
+-(instancetype)initWithPasteboardPropertyList:(id)propertyList ofType:(NSString*)type {
+    NSDictionary *dd=[NSKeyedUnarchiver unarchiveObjectWithData:propertyList];
+    if (!dd[@"."]) return nil;
+    if (!(self=[super init])) return nil;
+    _rawContents=dd[@"."]; // unarchived, no need to copy
+    [self finishPasteWithDictionary:dd];
+    return self;
 }
 
 

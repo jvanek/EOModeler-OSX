@@ -8,7 +8,7 @@
 
 // base class for all EO objects, shared functionality
 
-@interface EOObject:NSObject
+@interface EOObject:NSObject <NSPasteboardWriting, NSPasteboardReading>
 @property NSMutableDictionary *userInfo; // dynamic, ie., reads from rawContents -- see below
 
 @property NSMutableDictionary *rawContents; // "real" property; the raw dictionary contents, as read/written to/from file
@@ -16,6 +16,8 @@
 +(NSDictionary*)keyForProperty; // all @dynamic properties are automatically read from/written to the rawContents dictionary. If a property should use a different dictionary key, return {property:key} (no need for super, this level returns @{}). Key can contain dots for nested dictionaries
 
 +(NSString*)typeIdentifier; // essentially class name, but cleaned up from prefix and KVO artifacts
+-(void)prepareCopyWithDictionary:(NSMutableDictionary*)data; // to be overridden, adds to dictionary whatever it considers reasonable. The dictionary already contains rawContents (with key @".")
+-(void)finishPasteWithDictionary:(NSDictionary*)data; // self-describing (rawContents already set)
 
 -(void)reportDidChangeKeyPath:(NSString*)keypath oldValue:oldValue; // essentially internal, used in subclasses too. Sends EOObjectDidChangeNotification, copies value if copiable
 

@@ -7,6 +7,7 @@
 //
 
 @class EOModel,OCSEntitiesAC,OCSAttributesAC,OCSRelationshipsAC;
+@class OCS_AC;
 
 @interface OCSModel:NSDocument <NSSplitViewDelegate,NSTableViewDelegate> 
 @property (retain,nonatomic) EOModel *model;
@@ -26,6 +27,6 @@
 
 @property (readonly) BOOL smartSort;
 
-@property (readonly) id currentACController; // the currently selected one of entity/attribute/relationship controllers, if any
+@property (readonly) OCS_AC *currentACController; // the currently selected one of entity/attribute/relationship controllers, if any
 @end
 
