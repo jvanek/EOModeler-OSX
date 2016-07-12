@@ -14,7 +14,7 @@
 @end
 
 @implementation EOModel
-@dynamic modelVersion,adaptorName,entityDicts,entitiesWithSharedObjects,storedProcedures,connectionDictionary;
+@dynamic modelVersion,adaptorName,entityDicts,/*entitiesWithSharedObjects,*/storedProcedures,connectionDictionary;
 @dynamic username,password,urls,driver,plugin;
 
 -(void)insertObject:(EOEntity*)entity inEntitiesAtIndex:(NSUInteger)index {
@@ -32,7 +32,7 @@
     return @{
              @"modelVersion":@"EOModelVersion",
              @"entityDicts":@"entities",
-             @"entityDictsWithSharedObjects":@"entitiesWithSharedObjects",
+             //@"entityDictsWithSharedObjects":@"entitiesWithSharedObjects",
              @"username":@"connectionDictionary.username",
              @"password":@"connectionDictionary.password",
              @"urls":@"connectionDictionary.URL",

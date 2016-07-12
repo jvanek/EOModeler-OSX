@@ -11,6 +11,7 @@
                 <outlet property="attributesTable" destination="100125" id="100370"/>
                 <outlet property="entityAC" destination="100027" id="100367"/>
                 <outlet property="entityTable" destination="100032" id="100371"/>
+                <outlet property="fsEditor" destination="zOm-xo-IaO" id="uq2-al-hy1"/>
                 <outlet property="inspectorDrawer" destination="100487" id="100636"/>
                 <outlet property="inspectorSplitView" destination="100571" id="100637"/>
                 <outlet property="mainSplit" destination="100256" id="100362"/>
@@ -52,7 +53,7 @@
                                             <tableViewGridLines key="gridStyleMask" vertical="YES"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="entity" width="151" minWidth="40" maxWidth="1000" id="100036">
+                                                <tableColumn identifier="entity" width="133" minWidth="40" maxWidth="1000" id="100036">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Entity">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -80,7 +81,7 @@
                                                         </binding>
                                                     </connections>
                                                 </tableColumn>
-                                                <tableColumn editable="NO" width="24" minWidth="24" maxWidth="24" headerToolTip="Fetch Specifications" id="maX-sr-N78">
+                                                <tableColumn identifier="numberOfFSs" editable="NO" width="42" minWidth="42" maxWidth="42" headerToolTip="Fetch Specifications" id="maX-sr-N78">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="fs">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -92,7 +93,7 @@
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <connections>
-                                                        <binding destination="100027" name="value" keyPath="arrangedObjects.fetchSpecifications.@count" id="ZqK-gE-D0b">
+                                                        <binding destination="100027" name="value" keyPath="arrangedObjects.fetchSpecificationDisplayInfo" id="BvI-wX-rVc">
                                                             <dictionary key="options">
                                                                 <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
                                                                 <bool key="NSConditionallySetsEditable" value="YES"/>
@@ -129,6 +130,9 @@
                                                     </connections>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="delegate" destination="-2" id="rIi-UJ-86C"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1072,13 +1076,14 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <binding destination="100027" name="value" keyPath="selection.parent" id="XAc-n2-Mee">
+                                                            <binding destination="100027" name="value" keyPath="selection.sharedObjectFetchSpecificationNames" id="Rhw-QJ-mMI">
                                                                 <dictionary key="options">
                                                                     <string key="NSMultipleValuesPlaceholder">- multiple -</string>
                                                                     <string key="NSNoSelectionPlaceholder">- no selection -</string>
                                                                     <string key="NSNotApplicablePlaceholder">???</string>
                                                                     <string key="NSNullPlaceholder">- not set -</string>
                                                                     <bool key="NSValidatesImmediately" value="YES"/>
+                                                                    <string key="NSValueTransformerName">OCSSimpleStringArrayValueTransformer</string>
                                                                 </dictionary>
                                                             </binding>
                                                         </connections>
@@ -1115,6 +1120,24 @@
                                                             </binding>
                                                         </connections>
                                                     </button>
+                                                    <textField horizontalHuggingPriority="1" verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v6i-va-eNa">
+                                                        <rect key="frame" x="129" y="248" width="469" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" title="- fetchspecs -" usesSingleLineMode="YES" id="fQc-Vi-vMH">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="100027" name="value" keyPath="selection.fetchSpecificationNames" id="sdm-ZD-AaQ">
+                                                                <dictionary key="options">
+                                                                    <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                                    <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                                                                    <string key="NSValueTransformerName">OCSSimpleStringArrayValueTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </textField>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="100648" firstAttribute="top" secondItem="100496" secondAttribute="top" constant="20" symbolic="YES" id="100652"/>
@@ -1133,18 +1156,21 @@
                                                     <constraint firstItem="6jt-WK-CXl" firstAttribute="baseline" secondItem="dj7-uO-Gnf" secondAttribute="baseline" id="F8K-xO-Z75"/>
                                                     <constraint firstItem="mam-bW-4jc" firstAttribute="top" secondItem="zXp-l6-7E2" secondAttribute="bottom" constant="8" id="FmI-Hj-lnv"/>
                                                     <constraint firstItem="e2S-fe-mF0" firstAttribute="leading" secondItem="100964" secondAttribute="trailing" constant="16" id="Fqa-1U-te4"/>
+                                                    <constraint firstItem="v6i-va-eNa" firstAttribute="top" secondItem="R7e-5T-ZBn" secondAttribute="bottom" constant="8" id="Guz-of-wEq"/>
                                                     <constraint firstItem="HCE-LC-Xm8" firstAttribute="leading" secondItem="7tr-CF-Zbo" secondAttribute="trailing" constant="8" id="H7r-jD-GfK"/>
                                                     <constraint firstItem="wDG-pt-I7e" firstAttribute="leading" secondItem="1aA-7h-kWm" secondAttribute="trailing" constant="8" id="Hhx-cm-pcX"/>
                                                     <constraint firstItem="7tr-CF-Zbo" firstAttribute="baseline" secondItem="HCE-LC-Xm8" secondAttribute="baseline" id="Hnh-28-ZHy"/>
                                                     <constraint firstItem="Rkd-sy-8Q5" firstAttribute="trailing" secondItem="zXp-l6-7E2" secondAttribute="trailing" id="Hy8-OY-Q9f"/>
                                                     <constraint firstItem="1aA-7h-kWm" firstAttribute="leading" secondItem="4j0-9e-mEU" secondAttribute="trailing" constant="8" id="KGg-7G-g8m"/>
                                                     <constraint firstItem="1aA-7h-kWm" firstAttribute="leading" secondItem="Lh7-dD-wYq" secondAttribute="leading" id="Lg6-fJ-EbW"/>
+                                                    <constraint firstItem="v6i-va-eNa" firstAttribute="trailing" secondItem="R7e-5T-ZBn" secondAttribute="trailing" id="MbY-Nc-vUw"/>
                                                     <constraint firstItem="Rkd-sy-8Q5" firstAttribute="leading" secondItem="100954" secondAttribute="leading" id="Nbh-uA-8Pk"/>
                                                     <constraint firstItem="4j0-9e-mEU" firstAttribute="baseline" secondItem="1aA-7h-kWm" secondAttribute="baseline" id="OgI-Co-qTW"/>
                                                     <constraint firstItem="T9I-Jv-wcT" firstAttribute="leading" secondItem="zXp-l6-7E2" secondAttribute="leading" id="P4y-S7-dC6"/>
                                                     <constraint firstItem="1aA-7h-kWm" firstAttribute="centerY" secondItem="wDG-pt-I7e" secondAttribute="centerY" id="P7h-zl-hX7"/>
                                                     <constraint firstItem="mam-bW-4jc" firstAttribute="leading" secondItem="c4h-jl-4X7" secondAttribute="trailing" constant="8" id="VPa-AR-Vpm"/>
                                                     <constraint firstItem="zXp-l6-7E2" firstAttribute="leading" secondItem="bH0-gr-afH" secondAttribute="trailing" constant="8" id="WF1-Sj-y6E"/>
+                                                    <constraint firstItem="v6i-va-eNa" firstAttribute="leading" secondItem="R7e-5T-ZBn" secondAttribute="leading" id="WMg-Hh-w3W"/>
                                                     <constraint firstItem="T9I-Jv-wcT" firstAttribute="leading" secondItem="Rkd-sy-8Q5" secondAttribute="leading" id="Xo5-jc-GJ5"/>
                                                     <constraint firstItem="tFa-cZ-nPX" firstAttribute="baseline" secondItem="Rkd-sy-8Q5" secondAttribute="baseline" id="YGR-S0-Grd"/>
                                                     <constraint firstItem="Rkd-sy-8Q5" firstAttribute="top" secondItem="Lh7-dD-wYq" secondAttribute="bottom" constant="8" id="aMP-G5-qG4"/>
@@ -2775,6 +2801,85 @@
                 </menuItem>
             </items>
         </menu>
+        <window title="FS editor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="FSEditor" animationBehavior="default" id="eB8-My-r7o" userLabel="Window - FS editor">
+            <windowStyleMask key="styleMask" titled="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="821" height="725"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <view key="contentView" id="als-iw-iUz">
+                <rect key="frame" x="0.0" y="0.0" width="821" height="725"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fp-uw-1HW">
+                        <rect key="frame" x="20" y="61" width="781" height="644"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <clipView key="contentView" id="Giw-dr-6EP">
+                            <rect key="frame" x="1" y="1" width="764" height="642"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView importsGraphics="NO" richText="NO" findStyle="bar" allowsUndo="YES" verticallyResizable="YES" smartInsertDelete="YES" id="zOm-xo-IaO">
+                                    <rect key="frame" x="0.0" y="0.0" width="764" height="642"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="764" height="642"/>
+                                    <size key="maxSize" width="764" height="10000000"/>
+                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="764" height="642"/>
+                                    <size key="maxSize" width="764" height="10000000"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="mgY-N2-Gz4">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="5MV-zS-Ojr">
+                            <rect key="frame" x="765" y="1" width="15" height="642"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JQ4-gI-n04">
+                        <rect key="frame" x="748" y="13" width="59" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dwv-mh-DWq">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="fsEditorOK:" target="-2" id="mpi-wb-Giu"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="joj-zD-XRK">
+                        <rect key="frame" x="666" y="13" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="D3x-VD-WMn">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="fsEditorCancel:" target="-2" id="uNw-Es-myX"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="JQ4-gI-n04" secondAttribute="bottom" constant="20" id="653-i2-DGu"/>
+                    <constraint firstItem="joj-zD-XRK" firstAttribute="top" secondItem="2fp-uw-1HW" secondAttribute="bottom" constant="20" id="Jt7-cX-91Q"/>
+                    <constraint firstItem="joj-zD-XRK" firstAttribute="baseline" secondItem="JQ4-gI-n04" secondAttribute="baseline" id="Tti-Ew-C74"/>
+                    <constraint firstItem="2fp-uw-1HW" firstAttribute="leading" secondItem="als-iw-iUz" secondAttribute="leading" constant="20" id="VHE-8e-60L"/>
+                    <constraint firstAttribute="trailing" secondItem="2fp-uw-1HW" secondAttribute="trailing" constant="20" id="kZM-JP-6GO"/>
+                    <constraint firstItem="JQ4-gI-n04" firstAttribute="leading" secondItem="joj-zD-XRK" secondAttribute="trailing" constant="12" id="rI4-9U-af1"/>
+                    <constraint firstItem="2fp-uw-1HW" firstAttribute="top" secondItem="als-iw-iUz" secondAttribute="top" constant="20" id="vxE-TQ-pwg"/>
+                    <constraint firstAttribute="trailing" secondItem="JQ4-gI-n04" secondAttribute="trailing" constant="20" id="xMN-Dd-Gae"/>
+                </constraints>
+            </view>
+        </window>
     </objects>
     <resources>
         <image name="AttributeInspector" width="48" height="48"/>

@@ -100,3 +100,21 @@ static NSValueTransformer*(*original)(id,SEL,NSString*);
     }
 }
 @end
+
+@interface OCSSimpleStringArrayValueTransformer:NSValueTransformer @end
+@implementation OCSSimpleStringArrayValueTransformer
++(Class)transformedValueClass { return NSArray.class; }
+-transformedValue:value {
+    return [value componentsJoinedByString:@", "];
+}
+-reverseTransformedValue:value {
+    NSMutableArray *ma=[NSMutableArray array];
+    for (NSString *s in [value componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" ,;\t"]]) if (s.length) [ma addObject:s];
+    return ma;
+}
++(void)load {
+    @autoreleasepool {
+        [NSValueTransformer setValueTransformer:[[self alloc] init] forName:NSStringFromClass(self.class)];
+    }
+}
+@end

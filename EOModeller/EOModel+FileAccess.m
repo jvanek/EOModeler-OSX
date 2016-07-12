@@ -59,6 +59,7 @@
 }
 -(BOOL)synchronizeEntityDictsError:(NSError *__autoreleasing *)error {
     [(id)self.entityDicts removeAllObjects];
+    NSMutableArray *sharedECEntities=[NSMutableArray array];
     NSMutableSet *check=[NSMutableSet set];
     for (EOEntity *entity in self.entities) {
         if (!entity.name.length) {
@@ -74,7 +75,10 @@
             return NO;
         }
         [(id)self.entityDicts addObject:@{@"name":entity.name, @"className":entity.className}];
+        if (entity.sharedObjectFetchSpecificationNames.count) [sharedECEntities addObject:entity.name];
     }
+    if (!sharedECEntities.count) [self.rawContents removeObjectForKey:@"entitiesWithSharedObjects"];
+    else self.rawContents[@"entitiesWithSharedObjects"]=sharedECEntities;
     return YES;
 }
 -(NSFileWrapper*)fileWrapperError:(NSError *__autoreleasing *)error {

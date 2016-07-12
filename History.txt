@@ -3,7 +3,7 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 === known TODOs ===
 - raw dict editor for all items (either improved raw viewer, or text-based)
 - model group support
-- validations (when saving, before SQL generation, when user asks to, in reasonable extent automatically...)
+- validations (when saving, before SQL generation, when user asks to, in reasonable extent automatically... among others, warn/not err/ on different packages in model...)
 - reasonable prototype support (can't be done before model groups)
 - undo with UserInfo editor
 - smart relationship editor, M:N management etc
@@ -14,9 +14,21 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 - entity indexes
 === convenience and aesthetics ===
 - make smartsort model-based, not global
-- cut/copy/paste/dragdrop model objects
+- paste/dragdrop model objects full-featured (eg., paste attribs/relationships into entities; solve class props, etc.)
 - drag-based relationship creation
 - why the hell up/down arrows do not work in attribute/relationship lists?!?
+- base model package model-level to be added automagically to class names, warn if differs (validations above!)
+- improve SQL name generator not to dup _'s
+- when renaming attribs/rels, update entity lists (class props etc.), and to stay on the safe side, warn/remove on saving on old ids in those lists. Update also usages in relationships (ditto for entity names, used as destinations)
+- default entity templates: New.. from template, auto-copies
+- auto-fill usual things like EOInnerJoin for rels (or leave it to validations?)
+
+
+=== 2.4 === *QUICK AND DIRTY* FS and SharedCTXT support
+- fixed sharing EOSharedCTXT FS names: can be edited more or less manually like comma-(or-anything)-separated list; below is a list of available FSs. Not good, but quick :)
+- when saving, entities whose EOSharedCTXT FS names list is nonempty are automatically set as "entitiesWithSharedObjects"
+- the FS column in entities shows number of shared ones if any
+- click on FS column opens the FS editor -- at the moment, archived plaintext, sorry. Better'n'nothing :)
 
 === 2.3 ===
 - implemented copy/paste -- first Q&D attempt, not as smart as should be

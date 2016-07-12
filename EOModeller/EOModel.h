@@ -17,7 +17,7 @@
 @property NSString *modelVersion;
 @property NSString *adaptorName;
 @property NSArray *entityDicts; // these are sub-dicts, see below
-@property NSArray *entitiesWithSharedObjects; // these are just names (later, will add BOOL accessor to entity)
+//@property NSArray *entitiesWithSharedObjects; // these are just names (later, will add BOOL accessor to entity)
 @property NSArray *storedProcedures;
 @property NSDictionary *connectionDictionary; // see below
 

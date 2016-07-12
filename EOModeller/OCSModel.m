@@ -146,5 +146,6 @@
 -(IBAction)addNewRelationship:sender { [self.relationshipAC add:sender]; }
 
 -(IBAction)toggleModelInspector:sender { [self.inspectorDrawer toggle:sender]; }
+
 @end
 

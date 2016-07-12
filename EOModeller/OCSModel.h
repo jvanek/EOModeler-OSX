@@ -28,5 +28,8 @@
 @property (readonly) BOOL smartSort;
 
 @property (readonly) OCS_AC *currentACController; // the currently selected one of entity/attribute/relationship controllers, if any
+
+// TEMPORARY
+@property (assign,nonatomic) IBOutlet NSTextView *fsEditor;
 @end
 

@@ -12,6 +12,7 @@
 #import "OCSRelationshipsAC.h"
 
 #import "EOObject.h"
+#import "EOEntity.h"
 
 @interface OCSModel (TableViewDelegate) @end
 @implementation OCSModel (TableViewDelegate)
@@ -19,7 +20,20 @@
     NSInteger cc=tv.clickedColumn;
     return cc>=0 && cc<tv.tableColumns.count && ![[tv.tableColumns[cc] identifier] hasSuffix:@"_toggleYN"];
 }
+static EOEntity *editingFS; // QUICK AND DIRTY, see below
 -(BOOL)tableView:(NSTableView*)tv shouldTrackCell:(NSCell*)cell forTableColumn:(NSTableColumn*)column row:(NSInteger)row {
+    if (OCSEquals(column.identifier,@"numberOfFSs")) {
+        // QUICK AND DIRTY, will change when there's time to do FS editor right. Therefore dupped code, too
+        NSDictionary *bd=[column infoForBinding:@"value"];
+        NSArrayController *ac=bd[@"NSObservedObject"];
+        editingFS=ac.arrangedObjects[row];
+        NSLog(@"WANNA edit %@ of %@",editingFS.fetchSpecifications,editingFS.name);
+        // this is EXTREMELY q&d, WILL change... well, when I have some time :)
+        self.fsEditor.string=[editingFS.fetchSpecifications ocs_openStepPropertyListError:NULL]?:@"";
+        self.fsEditor.font=[NSFont userFixedPitchFontOfSize:0];
+        [NSApp beginSheet:self.fsEditor.window modalForWindow:self.entityTable.window modalDelegate:nil didEndSelector:NULL contextInfo:NULL];
+        return NO;
+    }
     if (![column.identifier hasSuffix:@"_toggleYN"]) return YES;
     NSDictionary *bd=[column infoForBinding:@"value"];
     NSArrayController *ac=bd[@"NSObservedObject"];
@@ -32,6 +46,22 @@
     }
     return NO;
 }
+-(IBAction)fsEditorOK:(id)sender {
+    NSError *error=nil; // used as flag. Ugly. Nevermind, temp code anyway!
+    id fs=nil;
+    if (self.fsEditor.string.length) {
+        fs=[NSPropertyListSerialization propertyListWithData:[self.fsEditor.string dataUsingEncoding:NSUTF8StringEncoding] options:NSPropertyListMutableContainersAndLeaves format:NULL error:&error];
+        if (!fs) [self.fsEditor.window presentError:error modalForWindow:self.fsEditor.window delegate:nil didPresentSelector:NULL contextInfo:NULL];
+    }
+    [editingFS setValue:fs forKey:@"fetchSpecifications"];
+    if (!error) [self fsEditorCancel:self];
+}
+-(IBAction)fsEditorCancel:(id)sender {
+    editingFS=nil;
+    [NSApp endSheet:self.fsEditor.window];
+    [self.fsEditor.window orderOut:self];
+}
+
 
 -(IBAction)toggleSmartJointAttributes:sender {
     NSLog(@"UNIMPLEMENTED %@",NSStringFromSelector(_cmd));
@@ -46,5 +76,15 @@
     NSLog(@"UNIMPLEMENTED %@",NSStringFromSelector(_cmd));
 }
 
-//-(void)
+// this one will change when there's time to do FSpecs right
+-(NSString*)tableView:(NSTableView*)tv toolTipForCell:(NSCell*)cell rect:(NSRectPointer)rect tableColumn:(NSTableColumn*)tc row:(NSInteger)row mouseLocation:(NSPoint)mouseLocation {
+    if (!OCSEquals(tc.identifier,@"numberOfFSs")) return nil;
+    
+    EOEntity *ent=self.entityAC.arrangedObjects[row];
+    NSArray *fsnames=[ent.fetchSpecifications.allKeys sortedArrayUsingSelector:@selector(localizedStandardCompare:)];
+    if (!fsnames) return nil;
+    return [fsnames componentsJoinedByString:@", "];
+}
+
+
 @end

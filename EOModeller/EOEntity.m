@@ -29,7 +29,7 @@
     return [NSSet setWithObject:@"className"];
 }
 
-GenerateISAccessors(model,SharedEOEntity,entitiesWithSharedObjects)
+//GenerateISAccessors(model,SharedEOEntity,entitiesWithSharedObjects)
 
 -(void)insertObject:(EOAttribute*)attr inAttributesAtIndex:(NSUInteger)index {
     attr.entity=self;
@@ -89,5 +89,38 @@ GenerateISAccessors(model,SharedEOEntity,entitiesWithSharedObjects)
 }
 -(NSString*)externalNameSuggestionFor:(NSString*)name {
     return [self.class sqlifiedNameForName:name withPrefix:@"T_"];
+}
+
+-(BOOL)validateSharedObjectFetchSpecificationNames:(NSArray**)names error:(NSError *__autoreleasing *)error {
+    NSArray *all=self.fetchSpecificationNames;
+    NSMutableSet *dups=[NSMutableSet set];
+    for (NSString *name in *names) {
+        if (![all containsObject:name]) {
+            if (error) *error=OCSERROR(@"'%@' is not a fetch specification name!",name);
+            return NO;
+        }
+        if ([dups containsObject:name]) {
+            if (error) *error=OCSERROR(@"'%@' is duplicated!",name);
+            return NO;
+        }
+        [dups addObject:name];
+    }
+    return YES;
+}
+
+-(NSArray*)fetchSpecificationNames { // allKeys key path does not work, tries for @"allKeys" key instead
+    return self.fetchSpecifications.allKeys;
+}
++(NSSet*)keyPathsForValuesAffectingSharedObjectFetchSpecificationNames {
+    return [NSSet setWithObject:@"fetchSpecifications"];
+}
+
+-(NSString*)fetchSpecificationDisplayInfo {
+    if (!self.fetchSpecifications.count) return nil;
+    if (!self.sharedObjectFetchSpecificationNames.count) return [NSString stringWithFormat:@"%ld",(long)self.fetchSpecifications.count];
+    return [NSString stringWithFormat:@"%ld.%ld",(long)self.fetchSpecifications.count,(long)self.sharedObjectFetchSpecificationNames.count];
+}
++(NSSet*)keyPathsForValuesAffectingFetchSpecificationDisplayInfo {
+    return [NSSet setWithObjects:@"fetchSpecifications",@"sharedObjectFetchSpecificationNames",nil];
 }
 @end
