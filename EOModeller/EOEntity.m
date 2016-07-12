@@ -120,7 +120,7 @@
     if (!self.sharedObjectFetchSpecificationNames.count) return [NSString stringWithFormat:@"%ld",(long)self.fetchSpecifications.count];
     return [NSString stringWithFormat:@"%ld.%ld",(long)self.fetchSpecifications.count,(long)self.sharedObjectFetchSpecificationNames.count];
 }
-+(NSSet*)keyPathsForValuesAffectingFetchSpecificationDisplayInfo {
++(NSSet*)keyPathsForValuesAffectingFetchSpecificationDisplayInfo { // does not quite seem to work?!? [FSNUPD] in OCSModel+TableViewDelegate
     return [NSSet setWithObjects:@"fetchSpecifications",@"sharedObjectFetchSpecificationNames",nil];
 }
 @end

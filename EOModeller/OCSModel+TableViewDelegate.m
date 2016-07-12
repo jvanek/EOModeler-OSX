@@ -53,7 +53,7 @@ static EOEntity *editingFS; // QUICK AND DIRTY, see below
         fs=[NSPropertyListSerialization propertyListWithData:[self.fsEditor.string dataUsingEncoding:NSUTF8StringEncoding] options:NSPropertyListMutableContainersAndLeaves format:NULL error:&error];
         if (!fs) [self.fsEditor.window presentError:error modalForWindow:self.fsEditor.window delegate:nil didPresentSelector:NULL contextInfo:NULL];
     }
-    [editingFS setValue:fs forKey:@"fetchSpecifications"];
+    [editingFS setValue:fs forKey:@"fetchSpecifications"]; // should auto-update the column (which works) and the list of FS names in inspector, which does not, [FSNUPD] in EOEntity. At the moment am NOT solving, for the code is to be trashed as soon as I have time for a decent FS editor anyway (it is alas a bit non-trivial due to those EOKeyArchived qualifiers)
     if (!error) [self fsEditorCancel:self];
 }
 -(IBAction)fsEditorCancel:(id)sender {
