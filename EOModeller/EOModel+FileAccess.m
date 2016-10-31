@@ -74,7 +74,8 @@
             if (error) *error=OCSERROR(@"The entity '%@' does not have a class name",entity.name);
             return NO;
         }
-        [(id)self.entityDicts addObject:@{@"name":entity.name, @"className":entity.className}];
+        if (entity.parent) [(id)self.entityDicts addObject:@{@"name":entity.name, @"className":entity.className, @"parent":entity.parent}];
+        else [(id)self.entityDicts addObject:@{@"name":entity.name, @"className":entity.className}];
         if (entity.sharedObjectFetchSpecificationNames.count) [sharedECEntities addObject:entity.name];
     }
     if (!sharedECEntities.count) [self.rawContents removeObjectForKey:@"entitiesWithSharedObjects"];

@@ -23,6 +23,11 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 - default entity templates: New.. from template, auto-copies
 - auto-fill usual things like EOInnerJoin for rels (or leave it to validations?)
 
+=== 2.6 ===
+- parent entity stored into index
+
+=== 2.5 ===
+- removed all number formatters (attributes width/precision/scale, relationship batch count): they made problems when archived as plist
 
 === 2.4 === *QUICK AND DIRTY* FS and SharedCTXT support
 - fixed sharing EOSharedCTXT FS names: can be edited more or less manually like comma-(or-anything)-separated list; below is a list of available FSs. Not good, but quick :)
