@@ -29,6 +29,7 @@
 
 @property (readonly) OCS_AC *currentACController; // the currently selected one of entity/attribute/relationship controllers, if any
 
+-(void)eoObjectDidChange:(NSNotification*)nn; // category access
 // TEMPORARY
 @property (assign,nonatomic) IBOutlet NSTextView *fsEditor;
 @end

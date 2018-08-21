@@ -78,6 +78,7 @@
         if (error) *error=OCSERROR(@"The entity '%@' is invalid, there is no data",self.name);
         return nil;
     }
+    self.rawContents[@"fetchSpecificationDictionary"]=self.fetchSpecifications.count?nil:@{};
     NSData *dd=[self.rawContents ocs_openStepPropertyListDataError:error];
     if (!dd) return nil;
     NSMutableArray *result=[NSMutableArray array];

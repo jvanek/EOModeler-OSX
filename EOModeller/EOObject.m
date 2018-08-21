@@ -10,6 +10,10 @@
 #import "EOObject.h"
 #import "EOModel.h"
 
+@protocol EOObjectDefaultNames // available in some of subclasses
+-(void)setDefaultNames:(NSString*)name;
+@end
+
 @implementation EOObject
 @dynamic userInfo;
 

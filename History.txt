@@ -7,7 +7,7 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 - reasonable prototype support (can't be done before model groups)
 - undo with UserInfo editor
 - smart relationship editor, M:N management etc
-- fetch spec editor, even if textedit :)
+- better fetch spec editor
 - better SQL generation with customizable templates (perhaps flexible enough for Java generation too, presumed anyone still uses that EOGenerator thing?)
 - model creation (which would work, unlike the current model creation :))
 - stored procedures... does anybody use the thing?
@@ -22,6 +22,10 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 - when renaming attribs/rels, update entity lists (class props etc.), and to stay on the safe side, warn/remove on saving on old ids in those lists. Update also usages in relationships (ditto for entity names, used as destinations)
 - default entity templates: New.. from template, auto-copies
 - auto-fill usual things like EOInnerJoin for rels (or leave it to validations?)
+
+=== 2.7 ===
+- fixed an entity format with fspecs (no fetchSpecificationDictionary)
+- also, got rid of the new warnings
 
 === 2.6 ===
 - parent entity stored into index

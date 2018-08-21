@@ -94,7 +94,7 @@
     files[@"index.eomodeld"]=[[NSFileWrapper alloc] initRegularFileWithContents:indexd];
     for (EOEntity *entity in self.entities) { // they do have unique names, we checked in synchronize
         NSArray *wraps=[entity fileWrappersError:error];
-        if (!wraps) return NO;
+        if (!wraps) return nil;
         files[[entity.name stringByAppendingPathExtension:@"plist"]]=wraps[0];
         if (wraps.count>1)
             files[[entity.name stringByAppendingPathExtension:@"fspec"]]=wraps[1];
