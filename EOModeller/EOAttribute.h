@@ -28,6 +28,7 @@
 @property NSString *readFormat;
 @property NSNumber *scale;
 @property NSString *serverTimeZone;
+@property NSString *valueFactoryClassName;
 @property NSString *valueFactoryMethodName;
 @property NSString *valueType;
 @property NSNumber *width;

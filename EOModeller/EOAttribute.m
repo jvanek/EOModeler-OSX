@@ -10,7 +10,7 @@
 #import "EOEntity.h"
 
 @implementation EOAttribute
-@dynamic adaptorValueConversionClassName,adaptorValueConversionMethodName,allowsNull,className,columnName,definition,externalType,factoryMethodArgumentType,isReadOnly,name,precision,prototypeName,readFormat,scale,serverTimeZone,valueFactoryMethodName,valueType,width,writeFormat;
+@dynamic adaptorValueConversionClassName,adaptorValueConversionMethodName,allowsNull,className,columnName,definition,externalType,factoryMethodArgumentType,isReadOnly,name,precision,prototypeName,readFormat,scale,serverTimeZone,valueFactoryClassName,valueFactoryMethodName,valueType,width,writeFormat;
 
 -(NSString*)displayAttributeType {
     if (self.definition) return [@"\u21b0 " stringByAppendingString:self.definition];
@@ -99,6 +99,9 @@ GenerateISAccessors(entity,PrimaryKey,primaryKeyAttributes)
 }
 -(BOOL)validatePrototypeName:(NSString**)name error:(NSError *__autoreleasing *)error {
     return [self validateName:name error:error];
+}
+-(BOOL)validateValueFactoryClassName:(NSString**)name error:(NSError *__autoreleasing *)error {
+    return [self validateClassName:name error:error];
 }
 -(BOOL)validateValueFactoryMethodName:(NSString**)name error:(NSError *__autoreleasing *)error {
     return [self validateName:name error:error];
