@@ -23,6 +23,13 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 - default entity templates: New.. from template, auto-copies
 - auto-fill usual things like EOInnerJoin for rels (or leave it to validations?)
 
+=== 2.9 ===
+Implemented own plist output format
+- it is better than relying on essentially undocumented strings file export behaviour
+- it allows us to sort dictionary items, making so files much more diff-friendly
+
+Also: bumped up minimal version, no need to support really ancient macOSen :)
+
 === 2.8 ===
 - added support for so-far-forgotten valueFactoryClassName
 - a couple of small cosmetic improvements, mostly autolayout-side

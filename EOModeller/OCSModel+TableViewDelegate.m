@@ -31,7 +31,7 @@ static EOEntity *editingFS; // QUICK AND DIRTY, see below
         // this is EXTREMELY q&d, WILL change... well, when I have some time :)
         self.fsEditor.string=[editingFS.fetchSpecifications ocs_openStepPropertyListError:NULL]?:@"";
         self.fsEditor.font=[NSFont userFixedPitchFontOfSize:0];
-        [NSApp beginSheet:self.fsEditor.window modalForWindow:self.entityTable.window modalDelegate:nil didEndSelector:NULL contextInfo:NULL];
+        [self.entityTable.window beginSheet:self.fsEditor.window completionHandler:nil];
         return NO;
     }
     if (![column.identifier hasSuffix:@"_toggleYN"]) return YES;
