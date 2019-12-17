@@ -17,7 +17,6 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 - paste/dragdrop model objects full-featured (eg., paste attribs/relationships into entities; solve class props, etc.)
 - drag-based relationship creation
 - why the hell up/down arrows do not work in attribute/relationship lists?!?
-- base model package model-level to be added automagically to class names, warn if differs (validations above!)
 - when renaming attribs/rels, update entity lists (class props etc.), and to stay on the safe side, warn/remove on saving on old ids in those lists. Update also usages in relationships (ditto for entity names, used as destinations)
 - default entity templates: New.. from template, auto-copies
 - auto-fill usual things like EOInnerJoin for rels (or leave it to validations?)
@@ -28,6 +27,10 @@ Implemented own plist output format
 - it allows us to sort dictionary items, making so files much more diff-friendly
 
 Improved SQL name generator not to dup _'s
+
+Model can have a default package, which is automatically prepended to all suggested class names.
+
+Model can contain a default package name, which is automatically added to all newly created class names.
 
 Also: bumped up minimal version, no need to support really ancient macOSen :)
 

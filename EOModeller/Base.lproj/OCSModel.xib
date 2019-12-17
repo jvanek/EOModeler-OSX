@@ -55,7 +55,7 @@
                                             <tableColumns>
                                                 <tableColumn identifier="entity" width="133" minWidth="40" maxWidth="1000" id="100036">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Entity">
-                                                        <font key="font" metaFont="label" size="11"/>
+                                                        <font key="font" metaFont="message" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
@@ -83,7 +83,7 @@
                                                 </tableColumn>
                                                 <tableColumn identifier="numberOfFSs" editable="NO" width="42" minWidth="42" maxWidth="42" headerToolTip="Fetch Specifications" id="maX-sr-N78">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="fs">
-                                                        <font key="font" metaFont="label" size="11"/>
+                                                        <font key="font" metaFont="message" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -104,7 +104,7 @@
                                                 </tableColumn>
                                                 <tableColumn identifier="table" width="120" minWidth="40" maxWidth="1000" id="100037">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Table">
-                                                        <font key="font" metaFont="label" size="11"/>
+                                                        <font key="font" metaFont="message" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
@@ -174,7 +174,7 @@
                                                     <tableColumns>
                                                         <tableColumn identifier="p_toggleYN" editable="NO" width="16" minWidth="16" maxWidth="16" headerToolTip="Primary key" id="100141">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="p">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -189,7 +189,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="v_toggleYN" editable="NO" width="16" minWidth="16" maxWidth="16" headerToolTip="Class property" id="100149">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="v">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -204,7 +204,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="l_toggleYN" editable="NO" width="16" minWidth="16" maxWidth="16" headerToolTip="Locking" id="100157">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="l">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -219,7 +219,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="n_toggleYN" editable="NO" width="16" minWidth="16" maxWidth="16" headerToolTip="NULL allowed" id="100288">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="n">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -234,7 +234,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="attr" width="180" minWidth="40" maxWidth="1000" id="100129">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Attribute">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                             </tableHeaderCell>
@@ -261,7 +261,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="class" editable="NO" width="337" minWidth="40" maxWidth="1000" id="100130">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Type">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                             </tableHeaderCell>
@@ -284,7 +284,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="column" width="180" minWidth="10" maxWidth="3.4028234663852886e+38" id="100147">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Column">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -351,7 +351,7 @@
                                                     <tableColumns>
                                                         <tableColumn identifier="v_toggleYN" editable="NO" width="16" minWidth="16" maxWidth="16" headerToolTip="Class property" id="100175">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="v">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -366,7 +366,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="kind" editable="NO" width="16" minWidth="16" maxWidth="16" headerToolTip="Relationship type" id="100174">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="k">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -381,7 +381,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="relationship" width="159.5" minWidth="40" maxWidth="1000" id="100181">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Relationship">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                             </tableHeaderCell>
@@ -408,7 +408,7 @@
                                                         </tableColumn>
                                                         <tableColumn identifier="rcontent" editable="NO" width="577.66796875" minWidth="10" maxWidth="3.4028234663852886e+38" id="100441">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Joins/Definition">
-                                                                <font key="font" metaFont="label" size="11"/>
+                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -682,12 +682,42 @@
                                                         </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-tk-8ca">
-                                                        <rect key="frame" x="21" y="434" width="644" height="16"/>
+                                                        <rect key="frame" x="21" y="357" width="644" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Other models in model group... oops, not implemented yet :)" id="mxg-fN-QNh">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QTC-WI-yfV">
+                                                        <rect key="frame" x="18" y="483" width="96" height="16"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Package:" id="KW0-m1-RWF">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vuL-Uu-gwF">
+                                                        <rect key="frame" x="120" y="480" width="264" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="264" id="tAd-e0-ryS"/>
+                                                        </constraints>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2DD-n2-DJx">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="100540" name="value" keyPath="model.model.userInfo.cz_ocs_defaultPackage" id="1ut-B0-vuG">
+                                                                <dictionary key="options">
+                                                                    <string key="NSMultipleValuesPlaceholder">- multiple -</string>
+                                                                    <string key="NSNoSelectionPlaceholder">- no selection -</string>
+                                                                    <string key="NSNotApplicablePlaceholder">???</string>
+                                                                    <string key="NSNullPlaceholder">- empty -</string>
+                                                                    <bool key="NSValidatesImmediately" value="YES"/>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -696,18 +726,23 @@
                                                     <constraint firstItem="Kyz-BH-dHm" firstAttribute="leading" secondItem="WHM-8K-uQT" secondAttribute="leading" id="1We-CK-T9c"/>
                                                     <constraint firstItem="kEb-Dm-gTg" firstAttribute="leading" secondItem="WHM-8K-uQT" secondAttribute="trailing" constant="10" id="8b9-Vy-BeV"/>
                                                     <constraint firstItem="gRk-FY-iQU" firstAttribute="leading" secondItem="1BL-kW-sjZ" secondAttribute="trailing" constant="8" id="9Cs-IJ-W8Z"/>
-                                                    <constraint firstItem="4yq-tk-8ca" firstAttribute="top" secondItem="Jl8-ZB-ggs" secondAttribute="bottom" constant="61" id="EWK-dX-YyD"/>
                                                     <constraint firstItem="kEb-Dm-gTg" firstAttribute="leading" secondItem="Jl8-ZB-ggs" secondAttribute="leading" id="GdW-PQ-DHm"/>
+                                                    <constraint firstItem="4yq-tk-8ca" firstAttribute="top" secondItem="vuL-Uu-gwF" secondAttribute="bottom" constant="107" id="K9d-ye-aZG"/>
                                                     <constraint firstItem="4yq-tk-8ca" firstAttribute="leading" secondItem="100497" secondAttribute="leading" constant="23" id="KQh-C2-74u"/>
                                                     <constraint firstItem="kEb-Dm-gTg" firstAttribute="top" secondItem="100497" secondAttribute="top" constant="20" id="Lza-6J-SfL"/>
                                                     <constraint firstItem="WHM-8K-uQT" firstAttribute="leading" secondItem="100497" secondAttribute="leading" constant="20" id="SL1-zD-RqF"/>
+                                                    <constraint firstItem="vuL-Uu-gwF" firstAttribute="leading" secondItem="QTC-WI-yfV" secondAttribute="trailing" constant="8" id="T6e-9s-0Td"/>
                                                     <constraint firstItem="Jl8-ZB-ggs" firstAttribute="leading" secondItem="Kyz-BH-dHm" secondAttribute="trailing" constant="10" id="TRa-GN-SsC"/>
+                                                    <constraint firstItem="vuL-Uu-gwF" firstAttribute="leading" secondItem="Jl8-ZB-ggs" secondAttribute="leading" id="TvP-qV-Cbf"/>
+                                                    <constraint firstItem="vuL-Uu-gwF" firstAttribute="top" secondItem="Jl8-ZB-ggs" secondAttribute="bottom" constant="10" symbolic="YES" id="XgD-as-leN"/>
                                                     <constraint firstItem="1BL-kW-sjZ" firstAttribute="leading" secondItem="kEb-Dm-gTg" secondAttribute="trailing" constant="28" id="ajl-Hq-tc6"/>
                                                     <constraint firstItem="WHM-8K-uQT" firstAttribute="baseline" secondItem="kEb-Dm-gTg" secondAttribute="baseline" id="bAB-Gc-oTG"/>
                                                     <constraint firstItem="Kyz-BH-dHm" firstAttribute="top" secondItem="WHM-8K-uQT" secondAttribute="bottom" constant="14" id="ic1-Pb-3Mo"/>
                                                     <constraint firstAttribute="trailing" secondItem="4yq-tk-8ca" secondAttribute="trailing" constant="20" id="izE-fk-wvo"/>
                                                     <constraint firstItem="Jl8-ZB-ggs" firstAttribute="top" secondItem="gRk-FY-iQU" secondAttribute="bottom" constant="10" id="izp-FP-4yk"/>
+                                                    <constraint firstItem="QTC-WI-yfV" firstAttribute="leading" secondItem="Kyz-BH-dHm" secondAttribute="leading" id="jRk-9w-1Va"/>
                                                     <constraint firstItem="1BL-kW-sjZ" firstAttribute="baseline" secondItem="gRk-FY-iQU" secondAttribute="baseline" id="lYg-cf-A2r"/>
+                                                    <constraint firstItem="QTC-WI-yfV" firstAttribute="baseline" secondItem="vuL-Uu-gwF" secondAttribute="baseline" id="ofe-jO-UQ9"/>
                                                     <constraint firstItem="WHM-8K-uQT" firstAttribute="baseline" secondItem="gRk-FY-iQU" secondAttribute="baseline" id="qRP-Ab-Ut9"/>
                                                     <constraint firstItem="100638" firstAttribute="leading" secondItem="Jl8-ZB-ggs" secondAttribute="trailing" constant="8" id="udb-k0-fQh"/>
                                                     <constraint firstItem="100638" firstAttribute="leading" secondItem="gRk-FY-iQU" secondAttribute="trailing" constant="8" id="zDK-A0-V94"/>
@@ -1061,7 +1096,7 @@
                                                     <textField horizontalHuggingPriority="1" verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v6i-va-eNa">
                                                         <rect key="frame" x="126" y="255" width="471" height="14"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" title="- fetchspecs -" usesSingleLineMode="YES" id="fQc-Vi-vMH">
-                                                            <font key="font" metaFont="label" size="11"/>
+                                                            <font key="font" metaFont="message" size="11"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -2382,7 +2417,7 @@
                                                                     <tableColumns>
                                                                         <tableColumn width="116" minWidth="40" maxWidth="1000" id="100743">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="User Info Key">
-                                                                                <font key="font" metaFont="label" size="11"/>
+                                                                                <font key="font" metaFont="message" size="11"/>
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                                             </tableHeaderCell>
@@ -2402,7 +2437,7 @@
                                                                         </tableColumn>
                                                                         <tableColumn width="553" minWidth="40" maxWidth="1000" id="100744">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Value">
-                                                                                <font key="font" metaFont="label" size="11"/>
+                                                                                <font key="font" metaFont="message" size="11"/>
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                                             </tableHeaderCell>

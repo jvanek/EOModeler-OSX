@@ -85,7 +85,9 @@
 }
 
 -(NSString*)classNameSuggestionFor:(NSString*)name {
-    return name;
+    NSString *pkg=self.model.userInfo[@"cz_ocs_defaultPackage"];
+    if (!pkg.length) return name;
+    return [[pkg stringByAppendingString:@"."] stringByAppendingString:name];
 }
 -(NSString*)externalNameSuggestionFor:(NSString*)name {
     return [self.class sqlifiedNameForName:name withPrefix:@"T_"];
