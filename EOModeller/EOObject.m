@@ -71,9 +71,11 @@
     while (name.length) {
         for (n=1;n<name.length && islower([name characterAtIndex:n]);n++);
         //NSLog(@"... camelpart of (%@) is %d",name,n);
-        prefix=[prefix stringByAppendingString:[[name substringToIndex:n] uppercaseString]];
+        NSString *app=[[name substringToIndex:n] uppercaseString];
+        if ([prefix hasSuffix:@"_"] && [app hasPrefix:@"_"]) app=[app substringFromIndex:1];
+        prefix=[prefix stringByAppendingString:app];
         if (![name=[name substringFromIndex:n] length]) break;
-        if (n>1) prefix=[prefix stringByAppendingString:@"_"];
+        if (n>1 && ![prefix hasSuffix:@"_"]) prefix=[prefix stringByAppendingString:@"_"];
     }
     return prefix;
 }

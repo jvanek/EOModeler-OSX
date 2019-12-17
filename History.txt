@@ -18,7 +18,6 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 - drag-based relationship creation
 - why the hell up/down arrows do not work in attribute/relationship lists?!?
 - base model package model-level to be added automagically to class names, warn if differs (validations above!)
-- improve SQL name generator not to dup _'s
 - when renaming attribs/rels, update entity lists (class props etc.), and to stay on the safe side, warn/remove on saving on old ids in those lists. Update also usages in relationships (ditto for entity names, used as destinations)
 - default entity templates: New.. from template, auto-copies
 - auto-fill usual things like EOInnerJoin for rels (or leave it to validations?)
@@ -27,6 +26,8 @@ There's no licence for this code, I don't like lawspeak anyway. Simply use it wi
 Implemented own plist output format
 - it is better than relying on essentially undocumented strings file export behaviour
 - it allows us to sort dictionary items, making so files much more diff-friendly
+
+Improved SQL name generator not to dup _'s
 
 Also: bumped up minimal version, no need to support really ancient macOSen :)
 
