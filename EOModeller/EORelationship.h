@@ -6,7 +6,7 @@
 //  Copyleft (c) 2016 OC. No rights reserved, what for, on earth?.
 //
 
-// represents an attribute in an entity
+// represents a relatioship in an entity
 
 #import "EOObject.h"
 

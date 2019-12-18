@@ -2284,9 +2284,9 @@
                                                             </binding>
                                                         </connections>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="10" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="emw-kb-34t">
+                                                    <textField horizontalHuggingPriority="10" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emw-kb-34t">
                                                         <rect key="frame" x="141" y="286" width="456" height="16"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="- inverse -" id="h1y-4D-3KY">
+                                                        <textFieldCell key="cell" truncatesLastVisibleLine="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" title="- inverse -" id="h1y-4D-3KY">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2323,7 +2323,6 @@
                                                     <constraint firstItem="jEJ-rU-0jH" firstAttribute="centerY" secondItem="L9t-7X-qWA" secondAttribute="centerY" id="6Iw-TH-L0L"/>
                                                     <constraint firstItem="JII-8b-bou" firstAttribute="top" secondItem="xq3-Ga-dGZ" secondAttribute="bottom" constant="8" id="70d-cz-YCa"/>
                                                     <constraint firstItem="iaH-m6-xS4" firstAttribute="leading" secondItem="100505" secondAttribute="leading" constant="20" id="8eR-jR-3yk"/>
-                                                    <constraint firstItem="GVy-QD-My5" firstAttribute="baseline" secondItem="emw-kb-34t" secondAttribute="baseline" id="9Ew-pn-J4D"/>
                                                     <constraint firstItem="0EH-7w-nzZ" firstAttribute="baseline" secondItem="IPg-ID-fdr" secondAttribute="baseline" id="9jL-Wy-sD8"/>
                                                     <constraint firstItem="n9X-N1-d6c" firstAttribute="leading" secondItem="hSZ-AI-okr" secondAttribute="trailing" constant="8" id="9jZ-8d-Goq"/>
                                                     <constraint firstItem="0EH-7w-nzZ" firstAttribute="trailing" secondItem="Z8d-fs-UEJ" secondAttribute="trailing" id="9zp-yS-M5C"/>
@@ -2335,6 +2334,7 @@
                                                     <constraint firstItem="jEJ-rU-0jH" firstAttribute="top" secondItem="n9X-N1-d6c" secondAttribute="bottom" constant="8" id="H5l-Qw-ZYc"/>
                                                     <constraint firstItem="Q0h-EG-ajL" firstAttribute="leading" secondItem="100505" secondAttribute="leading" constant="20" id="HvS-Xy-91d"/>
                                                     <constraint firstItem="xq3-Ga-dGZ" firstAttribute="leading" secondItem="e8S-Js-cAy" secondAttribute="trailing" constant="16" id="JMX-6H-QAx"/>
+                                                    <constraint firstItem="emw-kb-34t" firstAttribute="firstBaseline" secondItem="GVy-QD-My5" secondAttribute="firstBaseline" id="Kyk-8K-oG6"/>
                                                     <constraint firstItem="SWC-f6-uOF" firstAttribute="baseline" secondItem="zqF-vH-eDr" secondAttribute="baseline" id="MKm-R7-B7Z"/>
                                                     <constraint firstItem="JII-8b-bou" firstAttribute="leading" secondItem="GvV-Xs-KNo" secondAttribute="leading" id="NRI-gk-oTl"/>
                                                     <constraint firstItem="uFG-Ac-s3z" firstAttribute="leading" secondItem="100505" secondAttribute="leading" constant="20" id="Nf5-eN-awE"/>
@@ -2480,7 +2480,7 @@
                                                         </constraints>
                                                         <buttonCell key="cell" type="roundRect" title="+" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="100791">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="controlContent"/>
+                                                            <font key="font" metaFont="label" size="12"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="add:" target="100761" id="100800"/>
@@ -2493,7 +2493,7 @@
                                                         </constraints>
                                                         <buttonCell key="cell" type="roundRect" title="-" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="100785">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="controlContent"/>
+                                                            <font key="font" metaFont="label" size="12"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="remove:" target="100761" id="100799"/>
