@@ -30,7 +30,9 @@ Improved SQL name generator not to dup _'s
 
 Model can have a default package, which is automatically prepended to all suggested class names.
 
-Model can contain a default package name, which is automatically added to all newly created class names.
+Each cz.ocs.CheckFilesInterval seconds (registered 5; 0 would switch the feature off completely) application checks the files on disk for changes (e.g., a merge from remote or a checkout of a different branch). If changed, then if not edited and cz.ocs.AutoRevertToDiskVersion (not registered=NO) is set, automatically reverts to it; otherwise, shows an alert for the user to decide.
+
+*Beware* not tested much, also error reporting not quite good, some potential problems only logged.
 
 Also: bumped up minimal version, no need to support really ancient macOSen :)
 

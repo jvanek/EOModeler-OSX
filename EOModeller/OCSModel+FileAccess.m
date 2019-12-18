@@ -26,6 +26,8 @@
     @try {
         if (!(self.model=[EOModel modelFromWrapper:wrapper error:error])) return NO;
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(eoObjectDidChange:) name:EOObjectDidChangeNotification object:self.model]; // handler defined in OCSModel.h
+        self.originalWrapper=wrapper;
+        self.originalRawContents=self.model.rawContents;
     } @catch (id o) {
         NSLog(@"Exception: %@",o);
         if (error) *error=OCSERROR(@"Exception '%@'",o);

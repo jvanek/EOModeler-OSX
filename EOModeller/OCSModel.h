@@ -9,7 +9,12 @@
 @class EOModel,OCSEntitiesAC,OCSAttributesAC,OCSRelationshipsAC;
 @class OCS_AC;
 
-@interface OCSModel:NSDocument <NSSplitViewDelegate,NSTableViewDelegate> 
+@interface OCSModel:NSDocument <NSSplitViewDelegate,NSTableViewDelegate>
+@property (retain, nonatomic) NSFileWrapper *originalWrapper; // kept so that I can check for changes
+@property (copy, nonatomic) NSDictionary *originalRawContents; // need both to check for contents too
+@property (retain, nonatomic) NSTimer *originalCheckerTimer; // we'll check occasionally
+@property (weak, nonatomic) NSAlert *fileDiffersAlert; // and show the alert if differs
+
 @property (retain,nonatomic) EOModel *model;
 
 @property (retain,nonatomic) IBOutlet NSWindow *sqlWindow; // so as it does not get released
